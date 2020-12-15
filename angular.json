@@ -62,7 +62,10 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "heroes:build"
+            "browserTarget": "heroes:build",
+            "host": "192.168.33.10",
+            "watch": true,
+            "poll": 2000
           },
           "configurations": {
             "production": {
