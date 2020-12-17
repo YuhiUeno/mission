@@ -13,6 +13,9 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
+            "watch": true,
+            "poll": 2000,
+
             "outputPath": "dist/heroes",
             "index": "src/index.html",
             "main": "src/main.ts",
