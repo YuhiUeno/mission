@@ -67,8 +67,7 @@
           "options": {
             "browserTarget": "heroes:build",
             "host": "192.168.33.10",
-            "watch": true,
-            "poll": 2000
+            "watch": true
           },
           "configurations": {
             "production": {
