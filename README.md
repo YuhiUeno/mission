@@ -2,7 +2,7 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.2.0.
 
-## Development server
+## Development server and build
 
 Run `npm start` for a node server. Navigate to `http://localhost:3000/`. If you want the app to be automatically reloaded when you change any of the source files, run `ng buid` on your another console.
 
