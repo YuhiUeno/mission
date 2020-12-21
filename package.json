@@ -3,7 +3,9 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "nodemon -L && npx browser-sync start --config bs-config.js",
+    "start": "start:nodemon & start:bs",
+    "start:nodemon": "nodemon -L",
+    "start:bs": "npx browser-sync start --config bs-config.js",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
