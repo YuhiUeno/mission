@@ -14,6 +14,7 @@
  */
 module.exports = {
     "ui": false,
+    "open": false,
     "files": ["dist/**/*"],
     "proxy": "192.168.33.10:3000",
     "port": 4000
