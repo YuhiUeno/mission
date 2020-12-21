@@ -93,9 +93,11 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.css"
+              "https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.3/semantic.min.css"
             ],
-            "scripts": []
+            "scripts": [
+              "https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.3/semantic.min.js"
+            ]
           }
         },
         "lint": {
