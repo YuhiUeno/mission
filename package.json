@@ -3,11 +3,9 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "run-s start:bs start:nodemon",
-    "start:nodemon": "nodemon -L",
-    "start:bs": "npx browser-sync start --config bs-config.js",
+    "start": "nodemon -L",
+    "test": "npx browser-sync start --config bs-config.js",
     "build": "ng build",
-    "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e"
   },
