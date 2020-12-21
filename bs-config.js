@@ -14,6 +14,6 @@
  */
 module.exports = {
     "ui": false,
-    "files": ["src/**/*.ts"],
+    "files": ["src/**/*"],
     "proxy": "192.168.33.10:3000"
 };
