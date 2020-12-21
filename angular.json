@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "heroes": {
+    "MISSION": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -16,7 +16,7 @@
             "watch": true,
             "poll": 2000,
 
-            "outputPath": "dist/heroes",
+            "outputPath": "dist/mission",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -65,13 +65,13 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "heroes:build",
+            "browserTarget": "mission:build",
             "host": "192.168.33.10",
             "watch": true
           },
           "configurations": {
             "production": {
-              "browserTarget": "heroes:build:production"
+              "browserTarget": "mission:build:production"
             }
           }
         },
@@ -115,15 +115,15 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "heroes:serve"
+            "devServerTarget": "mission:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "heroes:serve:production"
+              "devServerTarget": "mission:serve:production"
             }
           }
         }
       }
     }},
-  "defaultProject": "heroes"
+  "defaultProject": "mission"
 }
