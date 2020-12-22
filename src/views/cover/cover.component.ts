@@ -7,6 +7,22 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CoverComponent implements OnInit {
 
+  cardList = [
+    {title: "abc", description: "defghij"},
+    {title: "abc", description: "defghij"},
+    {title: "abc", description: "defghij"},
+    {title: "abc", description: "defghij"},
+    {title: "abc", description: "defghij"},
+    {title: "abc", description: "defghij"},
+    {title: "abc", description: "defghij"},
+    {title: "abc", description: "defghij"},
+    {title: "abc", description: "defghij"},
+    {title: "abc", description: "defghij"},
+    {title: "abc", description: "defghij"},
+    {title: "abc", description: "defghij"},
+    {title: "abc", description: "defghij"},
+    {title: "abc", description: "defghij"}
+]
   constructor() { }
 
   ngOnInit(): void {
