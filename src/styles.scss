@@ -12,8 +12,8 @@ html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 
 $teal-theme-primary: mat-palette($mat-teal, 600);
-$teal-theme-accent:  mat-palette($mat-pink, 500, 900, A100);
-$teal-theme-warn:    mat-palette($mat-deep-orange);
+$teal-theme-accent:  mat-palette($mat-brown, 300, 500, 900);
+$teal-theme-warn:    mat-palette($mat-deep-purple);
 
 $teal-theme: mat-light-theme($teal-theme-primary, $teal-theme-accent, $teal-theme-warn);
 
