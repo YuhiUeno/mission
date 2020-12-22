@@ -22,6 +22,8 @@ import { MatButtonModule } from '@angular/material/button'
 import { MatIconModule } from '@angular/material/icon'
 import { MatTabsModule } from '@angular/material/tabs'
 
+import { FlexLayoutModule } from '@angular/flex-layout'
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -43,6 +45,7 @@ import { MatTabsModule } from '@angular/material/tabs'
     MatButtonModule,
     MatIconModule,
     MatTabsModule,
+    FlexLayoutModule
     
 
     // HttpClientInMemoryWebApiModule.forRoot(

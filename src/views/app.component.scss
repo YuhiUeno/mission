@@ -1,0 +1,44 @@
+$itemColors:(
+  item1: red,
+  item2: blue,
+  item3: green,
+  item4: pink,
+  item5: slategray,
+  item6: teal
+);
+
+@each $item, $color in $itemColors {
+  .#{$item} {
+    background: $color;
+  }
+}
+
+.item {
+  width: 80px;
+  height: 80px;
+}
+
+.container {
+  width: 300px;
+  height: 300px;
+  color: #fff;
+  background: #eee;
+}
+
+.example-spacer {
+  flex: 1 1 auto;
+}
+
+svg#logo {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+a.logo-link:hover {
+  opacity: 0.5;
+}
+
+.header-button {
+  font-size: 16px;
+  font-weight: 700;
+}

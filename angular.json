@@ -97,11 +97,9 @@
               "src/assets"
             ],
             "styles": [
-              "./node_modules/@angular/material/prebuilt-themes/purple-green.css",
-              "https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.3/semantic.min.css"
             ],
             "scripts": [
-              "https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.3/semantic.min.js"
+
             ]
           }
         },
