@@ -14,9 +14,8 @@
   </button>
 </mat-toolbar>
 
-<nav mat-tab-nav-bar>
-  <a mat-tab-link [routerLink] = "navLinks[0].path">{{navLinks[0].label}}</a>
-  <a mat-tab-link [routerLink] = "navLinks[1].path">{{navLinks[1].label}}</a>
-</nav>
+<mat-tab-group (selectedTabChange)="onTabChanged($event)">
+  <mat-tab *ngFor="let navLink of navLinks" label="navLink.label"></mat-tab>
+</mat-tab-group>
 <router-outlet></router-outlet>
 <views-messages></views-messages>
