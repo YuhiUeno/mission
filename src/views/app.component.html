@@ -18,7 +18,8 @@
   <a mat-tab-link *ngFor="let navLink of navLinks"
     [routerLink] = "navLink.path"
     routerLinkActive #rla="routerLinkActive"
-    [active]="rla.isActive">{{navLink.label}}
+    [active]="rla.isActive">
+    {{navLink.label}}
   </a>
 </nav>
 <router-outlet></router-outlet>
