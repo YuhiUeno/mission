@@ -15,7 +15,6 @@
           "options": {
             "watch": true,
             "poll": 2000,
-
             "outputPath": "dist/mission",
             "index": "src/index.html",
             "main": "src/main.ts",
@@ -27,6 +26,7 @@
               "src/assets"
             ],
             "styles": [
+              "./node_modules/@angular/material/prebuilt-themes/purple-green.css",
               "src/styles.css",
               "../../semantic/dist/semantic.min.css"
             ],
@@ -97,6 +97,7 @@
               "src/assets"
             ],
             "styles": [
+              "./node_modules/@angular/material/prebuilt-themes/purple-green.css",
               "https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.3/semantic.min.css"
             ],
             "scripts": [
@@ -130,6 +131,7 @@
           }
         }
       }
-    }},
+    }
+  },
   "defaultProject": "mission"
 }
