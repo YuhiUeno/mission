@@ -16,8 +16,8 @@
 
 <nav>
   <a *ngFor="let link of navLinks"
-    [routerLink] = "link.path"
-    {{link.label}}>
+    [routerLink] = "link.path">
+    {{link.label}}
   </a>
 </nav>
 <router-outlet></router-outlet>
