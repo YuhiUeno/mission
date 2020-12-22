@@ -32,6 +32,11 @@ nav a.active {
   flex: 1 1 auto;
 }
 
+svg#logo {
+  display: table-cell;
+  vertical-align: middle;
+}
+
 a.logo-link:hover {
   opacity: 0.5;
 }

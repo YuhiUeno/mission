@@ -8,6 +8,7 @@ import { Router } from '@angular/router';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+  title = 'mission'
   navLinks = [
       {path: '/dashboard', label: 'DASHBOARD', index: 0},
       {path: '/heroes', label: "HEROES", index: 1}
