@@ -15,12 +15,9 @@
 </mat-toolbar>
 
 <nav mat-tab-nav-bar>
-  <a mat-tab-link *ngFor="let link of links"
-    [routerLink] = "link.path"
-    routerLinkActive #rla="routerLinkAcrive"
-    [active]="rla.isActive">
-    {{link.label}}
-  </a>
+  <a mat-tab-link *ngFor="let navLink of navLinks"
+     (click)="activeLink = navLink"
+     [active]="activeLink == navLink"> {{navLink}} </a>
 </nav>
 
 

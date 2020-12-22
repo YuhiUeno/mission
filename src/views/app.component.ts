@@ -6,6 +6,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  links = ['/dashboard', '/heroes']
-  activeLink = this.links[0]
+  navLinks = ['/dashboard', '/heroes']
+  activeLink = this.navLinks[0]
 }
