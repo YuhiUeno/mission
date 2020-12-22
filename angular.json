@@ -5,7 +5,11 @@
   "projects": {
     "MISSION": {
       "projectType": "application",
-      "schematics": {},
+      "schematics": {
+        "@schematics/angular:component": {
+          "style": "scss"
+        }
+      },
       "root": "",
       "sourceRoot": "src",
       "prefix": "views",
@@ -26,7 +30,7 @@
               "src/assets"
             ],
             "styles": [
-              "./node_modules/@angular/material/prebuilt-themes/purple-green.css"
+              "src/styles.scss"
             ],
             "scripts": []
           },
@@ -39,7 +43,7 @@
                 }
               ],
               "optimization": true,
-              "outputHashing": "all",
+              "outputHashning": "all",
               "sourceMap": false,
               "extractCss": true,
               "namedChunks": false,
