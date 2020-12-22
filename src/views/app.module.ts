@@ -20,6 +20,7 @@ import { MatSliderModule } from '@angular/material/slider'
 import { MatToolbarModule } from '@angular/material/toolbar'
 import { MatButtonModule } from '@angular/material/button'
 import { MatIconModule } from '@angular/material/icon'
+import { MatTabsModule } from '@angular/material/tabs'
 
 @NgModule({
   declarations: [
@@ -40,7 +41,8 @@ import { MatIconModule } from '@angular/material/icon'
     MatSliderModule,
     MatToolbarModule,
     MatButtonModule,
-    MatIconModule
+    MatIconModule,
+    MatTabsModule
     
 
     // HttpClientInMemoryWebApiModule.forRoot(
