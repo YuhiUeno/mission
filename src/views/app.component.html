@@ -1,16 +1,15 @@
 <mat-toolbar id=header color="basic">
-  <div class="container" fxLayout="column">
-    <div class="logo-column" fxLayout="0 0 200px">
-      <a class="logo-link" href="/"><views-logo></views-logo></a>
-      <button mat-icon-button class="main-menu-icon" aria-label="Main menu expansion button.">
-        <mat-icon>menu</mat-icon>
-      </button>
-    </div>
-    <div class="header-spacer" fxLayout="grow"></div>
-    <div class="header-right-button-box">
-      <button mat-button class="header-button header-login-button">Log In</button>
-      <button mat-button class="header-button header-signup-button">Sign Up</button>
-    </div>
+  <div>
+    <a class="logo-link" href="/"><views-logo></views-logo></a>
+    <button mat-icon-button class="main-menu-icon" aria-label="Main menu expansion button.">
+      <mat-icon>menu</mat-icon>
+    </button>
+  </div>
+  <div class="header-right-button-box" fxFlexOffset="auto">
+    <button mat-button class="header-button header-login-button">Log In</button>
+  </div>
+  <div>
+    <button mat-button class="header-button header-signup-button">Sign Up</button>
   </div>
 </mat-toolbar>
 
