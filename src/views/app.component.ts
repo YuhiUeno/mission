@@ -8,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class AppComponent {
   title = 'mission'
   navLinks = [
-      {path: '/dashboard', label: 'DASHBOARD', index: 0},
-      {path: '/heroes', label: "HEROES", index: 1}
+      {path: '/cover', label: 'Cover'},
+      {path: '/heroes', label: "Heroes"}
   ]
 }
