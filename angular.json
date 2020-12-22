@@ -28,8 +28,7 @@
             "styles": [
               "./node_modules/@angular/material/prebuilt-themes/purple-green.css"
             ],
-            "scripts": [
-            ]
+            "scripts": []
           },
           "configurations": {
             "production": {
