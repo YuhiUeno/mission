@@ -17,6 +17,7 @@ import { LogoComponent } from './logo/logo.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { MatSliderModule } from '@angular/material/slider'
+import { MatToolbarModule } from '@angular/material/toolbar'
 
 @NgModule({
   declarations: [
@@ -27,7 +28,6 @@ import { MatSliderModule } from '@angular/material/slider'
     DashboardComponent,
     HeroSearchComponent,
     LogoComponent,
-    MatSliderModule
   ],
   imports: [
     BrowserModule,
@@ -35,6 +35,9 @@ import { MatSliderModule } from '@angular/material/slider'
     AppRoutingModule,
     HttpClientModule,
     BrowserAnimationsModule,
+    MatSliderModule,
+    MatToolbarModule
+    
 
     // HttpClientInMemoryWebApiModule.forRoot(
     //   InMemoryDataService, { dataEncapsulation: false }
