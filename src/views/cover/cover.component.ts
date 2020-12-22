@@ -9,19 +9,7 @@ export class CoverComponent implements OnInit {
 
   cardList = [
     {title: "abc", description: "defghij"},
-    {title: "abc", description: "defghij"},
-    {title: "abc", description: "defghij"},
-    {title: "abc", description: "defghij"},
-    {title: "abc", description: "defghij"},
-    {title: "abc", description: "defghij"},
-    {title: "abc", description: "defghij"},
-    {title: "abc", description: "defghij"},
-    {title: "abc", description: "defghij"},
-    {title: "abc", description: "defghij"},
-    {title: "abc", description: "defghij"},
-    {title: "abc", description: "defghij"},
-    {title: "abc", description: "defghij"},
-    {title: "abc", description: "defghij"}
+    {title: "klm", description: "nopqrst"},
 ]
   constructor() { }
 
