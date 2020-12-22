@@ -22,7 +22,8 @@ import { MatButtonModule } from '@angular/material/button'
 import { MatIconModule } from '@angular/material/icon'
 import { MatTabsModule } from '@angular/material/tabs'
 
-import { FlexLayoutModule } from '@angular/flex-layout'
+import { FlexLayoutModule } from '@angular/flex-layout';
+import { CoverComponent } from './cover/cover.component'
 
 @NgModule({
   declarations: [
@@ -33,6 +34,7 @@ import { FlexLayoutModule } from '@angular/flex-layout'
     DashboardComponent,
     HeroSearchComponent,
     LogoComponent,
+    CoverComponent,
   ],
   imports: [
     BrowserModule,
