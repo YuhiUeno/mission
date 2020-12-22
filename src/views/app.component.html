@@ -2,7 +2,7 @@
   <a class="logo-link" href="/">
     <views-logo></views-logo>
   </a>
-  <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+  <button mat-icon-button class="main-menu-icon" aria-label="Main menu expansion button.">
     <mat-icon>menu</mat-icon>
   </button>
   <span class="example-spacer"></span>
@@ -14,6 +14,14 @@
   </button>
 </mat-toolbar>
 
+<mat-tab-group animationDuration="0ms">
+  <mat-tab label="First">
+    <a routerLink="/dashboard">Dashboard</a>
+  </mat-tab>
+  <mat-tab label="Second">
+    <a routerLink="/heroes">Heroes</a>
+  </mat-tab>
+</mat-tab-group>
 
 <nav>
   <a routerLink="/dashboard">Dashboard</a>
