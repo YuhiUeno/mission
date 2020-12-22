@@ -14,9 +14,10 @@
   </button>
 </mat-toolbar>
 
-<nav>
-  <a routerLink="/dashboard">Dashboard</a>
-  <a routerLink="/heroes">Heroes</a>
+<nav mat-tab-nav-bar>
+  <a mat-tab-link
+  *ngFor="let link of navLinks"
+  [routerLink]="link.path">
 </nav>
 <router-outlet></router-outlet>
 <views-messages></views-messages>
