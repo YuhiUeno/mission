@@ -16,7 +16,7 @@ import { HeroSearchComponent } from './hero-search/hero-search.component';
 import { LogoComponent } from './logo/logo.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
-import { MatToolbarModule } from '@angular/material/toolbar'
+import { MatSliderModule } from '@angular/material/slider'
 
 @NgModule({
   declarations: [
@@ -27,7 +27,7 @@ import { MatToolbarModule } from '@angular/material/toolbar'
     DashboardComponent,
     HeroSearchComponent,
     LogoComponent,
-    MatToolbarModule
+    MatSliderModule
   ],
   imports: [
     BrowserModule,
