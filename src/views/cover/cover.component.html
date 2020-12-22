@@ -1,20 +1,21 @@
-<div 
-  gdAreas="header header | side content | footer footer"
-  gdGap="16px"
-  gdRows="auto auto auto"
-  gdAreas.md-xs="header | side | content | footer"
-  gdRows.md-xs="auto auto auto auto"
-  >
-  <div gdArea="header">
-    Header
-   </div>
-  <div gdArea="side">
-    Side
-   </div>
-  <div gdArea="content">
-    Content
-  </div>
-  <div gdArea="footer">
-    Footer
+<div fxFlex fxLayout="column" fxLayoutGap="10px" style="height:100vh">
+  <div fxLayout="row wrap">
+    <div
+      *ngFor="let card of cardList"
+      fxFlex="25"
+      fxFlex.md="33"
+      fxFlex.sm="50"
+      fxFlex.xs="100"
+      fxLayout="column"
+      style="padding: 5px;">
+      <mat-card>
+        <img mat-card-image [src]="card.imgSrc" />
+        <mat-card-title> {{ card.title }} </mat-card-title>
+        <mat-card-content> {{ card.description }} </mat-card-content>
+        <mat-card-footer>
+          <button fxFlex mat-flat-button color="primary">Do Something Button</button>
+        </mat-card-footer>
+      </mat-card>
+    </div>
   </div>
 </div>
