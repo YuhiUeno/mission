@@ -16,10 +16,10 @@
 
 <nav mat-tab-nav-bar>
   <a mat-tab-link *ngFor="let navLink of navLinks"
-     (click)="activeLink = navLink"
-     [active]="activeLink == navLink"> {{navLink}} </a>
+    [routerLink] = "navLink.path"
+    routerLinkActive #rla="routerLinkActive"
+    [active]="rla.isActive"> {{navLink.label}}
+  </a>
 </nav>
-
-
 <router-outlet></router-outlet>
 <views-messages></views-messages>
