@@ -31,3 +31,7 @@ nav a.active {
 .example-spacer {
   flex: 1 1 auto;
 }
+
+a.logo-link:hover {
+  opacity: 0.5;
+}
