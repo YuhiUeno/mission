@@ -1,4 +1,3 @@
-// @import '../node_modules/@angular/material/prebuilt-themes/purple-green.css';
 @import '../node_modules/@angular/material/theming';
 @include mat-core();
 
@@ -15,10 +14,11 @@ $teal-theme-primary: mat-palette($mat-teal, 600);
 $teal-theme-accent:  mat-palette($mat-brown, 300, 500, 900);
 $teal-theme-warn:    mat-palette($mat-deep-purple);
 
-$teal-theme: mat-light-theme($teal-theme-primary, $teal-theme-accent, $teal-theme-warn);
+$teal-light-theme: mat-light-theme($teal-theme-primary, $teal-theme-accent, $teal-theme-warn);
+$teal-dark-theme: mat-dark-theme($teal-theme-primary, $teal-theme-accent, $teal-theme-warn);
 
-@include angular-material-theme($teal-theme);
+@include angular-material-theme($teal-light-theme);
 
-$teal-theme: mat-light-theme($teal-theme-primary, $teal-theme-accent, $teal-theme-warn);
-
-@include angular-material-theme($teal-theme);
+.dark-theme {
+  @include angular-material-theme($teal-dark-theme);
+}
