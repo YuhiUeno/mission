@@ -26,7 +26,8 @@ import { MatToolbar } from '@angular/material/toolbar'
     MessagesComponent,
     DashboardComponent,
     HeroSearchComponent,
-    LogoComponent
+    LogoComponent,
+    MatToolbar
   ],
   imports: [
     BrowserModule,
