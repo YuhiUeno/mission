@@ -10,9 +10,6 @@ const routes: Routes = [
   { path: 'detail/:id', component: HeroDetailComponent}
 ]
 
-export const appRouting = RouterModule.forRoot(routes)
-
-
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
