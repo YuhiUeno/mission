@@ -11,3 +11,7 @@ svg#logo {
 a.logo-link:hover {
   opacity: 0.5;
 }
+
+.header-button {
+  font-size: 16px;
+}
