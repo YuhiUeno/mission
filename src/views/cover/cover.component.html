@@ -1,11 +1,11 @@
-<div fxFlex="100" fxLayout="column" fxLayoutAlign="start center">
+<div fxFlex fxLayout="row" style="width:100vw" fxLayoutAlign="center">
   <div
-    fxLayout="column"
-    fxLayoutGap="10px"
     style="height:100vh"
     fxFlex="80"
     fxFlex.md="90"
-    fxFlex.lt-md="100">
+    fxFlex.lt-md="100"
+    fxLayout="column"
+    fxLayoutGap="10px">
     <div fxLayout="row wrap">
       <div
         *ngFor="let card of cardList"
@@ -24,6 +24,7 @@
     </div>
     <div
       fxFlex="grow"
+      fxLayout="row"
       style="padding: 5px;">
       <mat-card>
           <mat-card-title>Story</mat-card-title>
@@ -32,5 +33,6 @@
             <button fxFlex mat-flat-button color="accent">Support me!</button>
           </mat-card-footer>
       </mat-card>
+    </div>
   </div>
 </div>
