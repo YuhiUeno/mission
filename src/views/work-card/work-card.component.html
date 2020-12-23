@@ -1,15 +1,15 @@
 <div class="cover-column" fxLayout="row wrap" fxLayoutAlign="center">
   <!-- ngClass.xs="work-image-mobile" -->
   <div
-    fxFlex="50"
-    fxFlex.xs=100
+    fxFlex="grow"
+    fxFlex.xs="100"
     fxLayout="column">
     <img class="work-image" src="https://material.angular.io/assets/img/examples/shiba2.jpg">
   </div>
   <div class="work-details"
-    fxFlex="50"
     fxFlex.xs="100"
-    fxLayout="column">
+    fxLayout="column"
+    style="width: auto; height: 350px;">
     <!-- display title, author, tags, and raised money etc... here -->
     <mat-card>
       <mat-card-title>{{work.title}}</mat-card-title>
