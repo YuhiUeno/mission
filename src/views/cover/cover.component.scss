@@ -5,10 +5,8 @@ div {
   }
   &.summary-column {
     padding: 10px;
-  }
-  &.description-section {
-    &.p {
-      font-size: 1.8vw;
-    }
+  }  
+  &.p {
+    font-size: 1.8vw;
   }
 }
