@@ -6,7 +6,9 @@ div {
   &.summary-column {
     padding: 10px;
   }
-  &.work-details-gt-md {
-    font-size: 32px;
+  &.description-section {
+    &.p {
+      font-size: 1.8vw;
+    }
   }
 }
