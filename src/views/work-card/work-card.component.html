@@ -1,32 +1,31 @@
-<div class="work-card-wrapper"
-  gdAreas="image title | image tags | image author | image description | fund | buttons"
-  gdGap="10px"
-  gDRows="auto auto auto"
-  gdAreas.xs="image | title | tags | author | description | fund | buttons">
-
-  <div gdArea="image">
-    <img src="https://material.angular.io/assets/img/examples/shiba2.jpg" width="250px">
+<div class="cover-column" fxLayout="row wrap" fxLayoutAlign="center">
+  <!-- ngClass.xs="work-image-mobile" -->
+  <div class="work-image"
+    fxFlex="50"
+    fxFlex.xs=100
+    fxLayout="column">
+    <mat-card>
+      <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg">
+    </mat-card>
   </div>
-  <div gdArea="title">
-    {{work.title}}
-  </div>
-  <div gdArea="tags">
-    <mat-chip-list aria-label="Tags">
-      <mat-chip *ngFor="let tag of work.tags">{{tag}}</mat-chip>
-    </mat-chip-list>
-  </div>
-  <div gdArea="author">
-    {{work.author}}
-  </div>
-  <div gdArea="description">
-    {{work.description}}
-  </div>
-  <div gdArea="fund">
-    {{work.fund | currency}}
-  </div>
-  <div gdArea="buttons">
-    <button mat-raised-button color="primary">Support!</button>
-    <button mat-raised-button color="accent">Like!</button>
+  <div class="work-details"
+    fxFlex="50"
+    fxFlex.xs="100"
+    fxLayout="column">
+    <!-- display title, author, tags, and raised money etc... here -->
+    <mat-card>
+      <mat-card-title>{{work.title}}</mat-card-title>
+      <mat-chip-list aria-label="Tags">
+        <mat-chip *ngFor="let tag of work.tags">{{tag}}</mat-chip>
+      </mat-chip-list>
+      <mat-card-subtitle>{{work.author}}</mat-card-subtitle>
+      <mat-card-content>{{work.description}}</mat-card-content>
+      <mat-card-footer>{{work.fund | currency}}</mat-card-footer>
+      <mat-card-actions>
+        <button fxFlex mat-flat-button color="primary">Support!</button>
+        <button fxFlex mat-flat-button color="accent">Like</button>
+      </mat-card-actions>
+    </mat-card>
   </div>
 </div>
 
