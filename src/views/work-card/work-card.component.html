@@ -28,44 +28,40 @@
   </div>
 </div>
 
-<div class="cover-column" fxLayout="row wrap" fxLayoutAlign="center">
-  <!-- ngClass.xs="work-image-mobile" -->
-  <div class="work-image">
-  </div>
-    <!-- display title, author, tags, and raised money etc... here -->
-    <style>
-      .cardInner {
-        display: grid;
-        grid-template-areas:
-          "image title"
-          "image tags"
-          "image author"
-          "image description"
-          "image fund"
-          "image buttons";
-          grid-template-rows: auto auto auto auto auto;
-          grid-row-gap: 10px;
-          grid-column-gap: 2px;
-      }
-    </style>
+<div>
+  <!-- display title, author, tags, and raised money etc... here -->
+  <style>
+    .cardInner {
+      display: grid;
+      grid-template-areas:
+        "image title"
+        "image tags"
+        "image author"
+        "image description"
+        "image fund"
+        "image buttons";
+        grid-template-rows: auto auto auto auto auto;
+        grid-row-gap: 10px;
+        grid-column-gap: 2px;
+    }
+  </style>
 
-    <div class="cardInnner">
-      <div [style.grid-area]="'image'">
-        <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg">
-      </div>
-      <div [style.grid-area] ="'title'">{{work.title}}</div>
-      <div [style.grid-area] ="'tags'">
-        <mat-chip-list aria-label="Tags">
-          <mat-chip *ngFor="let tag of work.tags">{{tag}}</mat-chip>
-        </mat-chip-list>
-      </div>
-      <div [style.grid-area] ="'author'">{{work.author}}</div>
-      <div [style.grid-area] ="'description'">{{work.description}}</div>
-      <div [style.grid-area] ="'fund'">{{work.fund | currency }}</div>
-      <div [style.grid-area] ="'buttons'">
-        <button fxFlex mat-flat-button color="primary">Support!</button>
-        <button fxFlex mat-flat-button color="accent">Like</button>
-      </div>
+  <div class="cardInnner">
+    <div [style.grid-area]="'image'">
+      <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg">
+    </div>
+    <div [style.grid-area] ="'title'">{{work.title}}</div>
+    <div [style.grid-area] ="'tags'">
+      <mat-chip-list aria-label="Tags">
+        <mat-chip *ngFor="let tag of work.tags">{{tag}}</mat-chip>
+      </mat-chip-list>
+    </div>
+    <div [style.grid-area] ="'author'">{{work.author}}</div>
+    <div [style.grid-area] ="'description'">{{work.description}}</div>
+    <div [style.grid-area] ="'fund'">{{work.fund | currency }}</div>
+    <div [style.grid-area] ="'buttons'">
+      <button fxFlex mat-flat-button color="primary">Support!</button>
+      <button fxFlex mat-flat-button color="accent">Like</button>
     </div>
   </div>
 </div>
