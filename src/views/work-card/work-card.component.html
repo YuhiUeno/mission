@@ -3,8 +3,7 @@
   <div class="work-image"
     fxFlex="50"
     fxFlex.xs=100
-    fxLayout="column"
-    style="padding: 10px;">
+    fxLayout="column">
     <mat-card>
       <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg">
     </mat-card>
@@ -17,10 +16,10 @@
     <mat-card>
       <mat-card-title>{{work.title}}</mat-card-title>
       <mat-card-content>
+        <div class="author"><h3>Author: {{work.author}}</h3></div>
         <mat-chip-list aria-label="Tags">
           <mat-chip *ngFor="let tag of work.tags">{{tag}}</mat-chip>
         </mat-chip-list>
-        <h3>{{work.author}}</h3>
         <p>{{work.description}}</p>
         <h3>{{work.fund | currency}}</h3>
       </mat-card-content>
