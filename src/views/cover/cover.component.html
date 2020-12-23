@@ -1,11 +1,15 @@
-<div fxFlex fxLayout="column" fxLayoutGap="10px" style="height:100vh">
+<div
+  fxFlex fxLayout="column"
+  fxLayoutGap="10px"
+  style="height:100vh"
+  fxFlex="80"
+  fxFlex.md="90"
+  fxFlex.lt-md="100">
   <div fxLayout="row wrap" fxLayoutAlign="center">
     <div
       *ngFor="let card of cardList"
-      fxFlex="40"
-      fxFlex.md="45"
-      fxFlex.sm="50"
-      fxFlex.xs="100"
+      fxFlex="50"
+      fxFlex.lt-md="100"
       fxLayout="column"
       style="padding: 5px;">
       <mat-card>
@@ -18,9 +22,7 @@
     </div>
   </div>
   <div
-    fxFlex="80"
-    fxFlex.md="90"
-    fxFlex.lt-md="100"
+    fxFlex="grow"
     style="padding: 5px;">
     <mat-card>
         <mat-card-title>Story</mat-card-title>
