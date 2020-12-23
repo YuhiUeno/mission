@@ -1,7 +1,3 @@
-.work-image {
-  padding: 10px;
-}
-
 .work-details {
   padding: 10px;
 }
@@ -19,8 +15,13 @@
   padding-top: 0px;
 }
 
-.work-image-beta {
+.work-image {
+  padding: 10px;
   width: 100%;
   height: auto;
   object-fit: contain;
+}
+
+.mat-card:not(class*=mat-elevation-z) {
+  box-shadow: none;
 }
