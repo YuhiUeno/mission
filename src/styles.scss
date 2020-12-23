@@ -19,9 +19,9 @@ $teal-dark-theme: mat-dark-theme($teal-theme-primary, $teal-theme-accent, $teal-
 
 @include angular-material-theme($teal-light-theme);
 
-.alternate-chips {
-  @include mat-chips-color($teal-light-theme);
-}
+
+@include mat-chips-theme($teal-light-theme);
+
 
 
 .dark-theme {
