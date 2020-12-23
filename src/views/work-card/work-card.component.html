@@ -17,13 +17,15 @@
       <mat-card-title>{{work.title}}</mat-card-title>
       <mat-card-content>
         <div class="author"><h3>Author: <a href="/">{{work.author}}</a></h3></div>
-        <mat-chip-list aria-label="Tags" class="tag-wrapper">
+        <mat-chip-list aria-label="Tags">
           <ng-container *ngFor="let tag of work.tags">
             <mat-chip *ngIf="tag.type==='required';" selected [color]="accent">{{tag.name}}</mat-chip>
             <mat-chip *ngIf="tag.type==='optional';">{{tag.name}}</mat-chip>
           </ng-container>
         </mat-chip-list>
-        <p>{{work.description}}</p>
+        <div class="description-section">
+          <p>{{work.description}}</p>
+        </div>
         <h2>{{work.fund | currency:'JPY'}}</h2>
       </mat-card-content>
       <mat-card-actions>
