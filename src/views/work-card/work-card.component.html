@@ -1,1 +1,27 @@
-<p>work-card works!</p>
+<div fxLayout="row wrap" class="cover-column">
+  <div class="work-image"
+    fxFlex="50"
+    fxFlex.lt-md="100"
+    fxLayout="column">
+    <!-- display cover image here -->
+    <mat-card>
+      <img mat-card-image [src]="../book.png" />
+    </mat-card>
+  </div>
+  <div class="work-details"
+    fxFlex="50"
+    fxFlex.lt-md="100"
+    fxLayout="column">
+    <!-- display title, author, tags, and raised money etc... here -->
+    <mat-card>
+      <mat-card-title>Starting over at 8</mat-card-title>
+      <mat-card-content>
+        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate
+      </mat-card-content>
+      <mat-card-footer>
+        <button fxFlex mat-flat-button color="primary">Support!</button>
+        <button fxFlex mat-flat-button color="accent">Like</button>
+      </mat-card-footer>
+    </mat-card>
+  </div>
+</div>
