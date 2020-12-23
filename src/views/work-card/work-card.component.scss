@@ -1,7 +1,21 @@
-.work-image {
-  width: 30vw;
-}
-
 .work-details {
   padding: 10px;
+}
+
+.wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: repeat(5, 20px);
+}
+
+.work-image {
+  grid-column-start: 1;
+  grid-row-start: 1;
+  grid-row-end: 6;
+}
+
+.cardInner {
+  grid-column-start: 2;
+  grid-row-start: 1;
+  grid-row-end: 6;
 }
