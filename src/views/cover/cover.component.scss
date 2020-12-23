@@ -5,5 +5,13 @@ div {
   }
   &.summary-column {
     padding: 10px;
-  }  
+  }
+  &.description-section {
+    font-size: 1.6vw;
+    line-height: 1.8vw;
+  }
+  &.gt-md {
+    font-size: 4.6vw;
+    line-height: 4.8vw;
+  }
 }
