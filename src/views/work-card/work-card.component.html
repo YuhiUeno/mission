@@ -30,13 +30,6 @@
         <h3>{{work.fund | currency}}</h3>
       </mat-card-content>
       <mat-card-actions>
-        <mat-chip *ngFor="let tag of work.tags" color="primary">
-          {{tag.name}}
-          <!--
-          <mat-chip *ngIf="tag.type==='required';" color="primary">{{tag.name}}</mat-chip>
-          <mat-chip *ngIf="tag.type==='optional';" color="basic">{{tag.name}}</mat-chip>
-          -->
-        </mat-chip>
         <button fxFlex mat-flat-button color="primary">Support!</button>
         <button fxFlex mat-flat-button color="accent">Like</button>
       </mat-card-actions>
