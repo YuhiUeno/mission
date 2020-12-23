@@ -24,7 +24,8 @@ import { MatTabsModule } from '@angular/material/tabs'
 import { MatCardModule } from '@angular/material/card'
 
 import { FlexLayoutModule } from '@angular/flex-layout';
-import { CoverComponent } from './cover/cover.component'
+import { CoverComponent } from './cover/cover.component';
+import { WorkCardComponent } from './work-card/work-card.component'
 
 @NgModule({
   declarations: [
@@ -36,6 +37,7 @@ import { CoverComponent } from './cover/cover.component'
     HeroSearchComponent,
     LogoComponent,
     CoverComponent,
+    WorkCardComponent,
   ],
   imports: [
     BrowserModule,
