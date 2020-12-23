@@ -1,35 +1,36 @@
-<div
-  fxFlex fxLayout="column"
-  fxLayoutGap="10px"
-  style="height:100vh"
-  fxFlex="80"
-  fxFlex.md="90"
-  fxFlex.lt-md="100">
-  <div fxLayout="row wrap" fxLayoutAlign="center">
+<div fxFlex fxLayout="column" fxLayoutAlign="start center">
+  <div
+    fxLayout="column"
+    fxLayoutGap="10px"
+    style="height:100vh"
+    fxFlex="80"
+    fxFlex.md="90"
+    fxFlex.lt-md="100">
+    <div fxLayout="row wrap">
+      <div
+        *ngFor="let card of cardList"
+        fxFlex="50"
+        fxFlex.lt-md="100"
+        fxLayout="column"
+        style="padding: 5px;">
+        <mat-card>
+          <mat-card-title> {{ card.title }} </mat-card-title>
+          <mat-card-content> {{ card.description }} </mat-card-content>
+          <mat-card-footer>
+            <button fxFlex mat-flat-button color="primary">Do Something Button</button>
+          </mat-card-footer>
+        </mat-card>
+      </div>
+    </div>
     <div
-      *ngFor="let card of cardList"
-      fxFlex="50"
-      fxFlex.lt-md="100"
-      fxLayout="column"
+      fxFlex="grow"
       style="padding: 5px;">
       <mat-card>
-        <mat-card-title> {{ card.title }} </mat-card-title>
-        <mat-card-content> {{ card.description }} </mat-card-content>
-        <mat-card-footer>
-          <button fxFlex mat-flat-button color="primary">Do Something Button</button>
-        </mat-card-footer>
+          <mat-card-title>Story</mat-card-title>
+          <mat-card-content>Short summary</mat-card-content>
+          <mat-card-footer>
+            <button fxFlex mat-flat-button color="accent">Support me!</button>
+          </mat-card-footer>
       </mat-card>
-    </div>
   </div>
-  <div
-    fxLayoutAlign="start center"
-    fxFlex="grow"
-    style="padding: 5px;">
-    <mat-card>
-        <mat-card-title>Story</mat-card-title>
-        <mat-card-content>Short summary</mat-card-content>
-        <mat-card-footer>
-          <button fxFlex mat-flat-button color="accent">Support me!</button>
-        </mat-card-footer>
-    </mat-card>
 </div>
