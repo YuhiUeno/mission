@@ -6,12 +6,13 @@
     fxFlex.lt-md="100"
     fxLayout="column"
     fxLayoutGap="10px">
-    <div fxLayout="row wrap" fxLayoutGap="10px">
+    <div fxLayout="row wrap">
       <div
         *ngFor="let card of cardList"
         fxFlex="50"
         fxFlex.lt-md="100"
-        fxLayout="column">
+        fxLayout="column"
+        style="padding: 10px;">
         <mat-card>
           <mat-card-title> {{ card.title }} </mat-card-title>
           <mat-card-content> {{ card.description }} </mat-card-content>
@@ -22,7 +23,7 @@
       </div>
     </div>
     <div fxLayout="row">
-      <div fxFlex="grow">
+      <div fxFlex="grow" style="padding: 10px;">
         <mat-card>
             <mat-card-title>Story</mat-card-title>
             <mat-card-content>Short summary</mat-card-content>
