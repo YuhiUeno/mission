@@ -1,7 +1,8 @@
-<div
-  gdAreas="image title | image title | image tags | image author"
+<div class="work-card-wrapper"
+  gdAreas="image title | image title | image tags | image author | image description | fund | buttons"
   gdGap="10px"
-  gDRows="auto auto auto">
+  gDRows="auto auto auto"
+  gdAreas.xs="image | title | tags | author | description | fund | buttons">
 
   <div gdArea="image">
     <img src="https://material.angular.io/assets/img/examples/shiba2.jpg" width="100%">
@@ -16,6 +17,16 @@
   </div>
   <div gdArea="author">
     {{work.author}}
+  </div>
+  <div gdArea="description">
+    {{work.description}}
+  </div>
+  <div gdArea="fund">
+    {{work.fund | currency}}
+  </div>
+  <div gdArea="buttons">
+    <mat-buttons-flat color="primary">Support!</mat-buttons-flat>
+    <mat-buttons-flat color="accecent">Like!</mat-buttons-flat>
   </div>
 </div>
 
