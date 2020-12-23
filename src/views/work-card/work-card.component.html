@@ -1,20 +1,18 @@
-<div class="wrapper">
-  <div class="work-image">
-    <img src="https://material.angular.io/assets/img/examples/shiba2.jpg">
+<div
+  gdAreas="image title | image title | image tags | image author"
+  gdGap="10px"
+  gDRows="auto auto auto">
+
+  <div gdArea="title">
+    {{work.title}}
   </div>
-  <div class="cardInnner">
-    <div class="title">{{work.title}}</div>
-    <div class="tags">
-      <mat-chip-list aria-label="Tags">
-        <mat-chip *ngFor="let tag of work.tags">{{tag}}</mat-chip>
-      </mat-chip-list>
-    </div>
-    <div class="author">{{work.author}}</div>
-    <div class="description">{{work.description}}</div>
-    <div class="fund">{{work.fund | currency }}</div>
-    <div class="buttons">
-      <button fxFlex mat-flat-button color="primary">Support!</button>
-      <button fxFlex mat-flat-button color="accent">Like</button>
-    </div>
+  <div gdArea="tags">
+    <mat-chip-list aria-label="Tags">
+      <mat-chip *ngFor="let tag of work.tags">{{tag}}</mat-chip>
+    </mat-chip-list>
+  </div>
+  <div gdArea="author">
+    {{work.author}}
   </div>
 </div>
+
