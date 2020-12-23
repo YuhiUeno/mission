@@ -1,29 +1,44 @@
-<div fxFlex fxLayout="row" style="width:100vw" fxLayoutAlign="center">
-  <div
+<div class="main-container" fxFlex fxLayout="row" style="width:100vw" fxLayoutAlign="center">
+  <div class="main-columns"
     style="height:100vh"
     fxFlex="80"
     fxFlex.md="90"
     fxFlex.lt-md="100"
     fxLayout="column"
     fxLayoutGap="10px">
-    <div fxLayout="row wrap">
+    <div fxLayout="row wrap" class="cover-column">
       <div
-        *ngFor="let card of cardList"
         fxFlex="50"
         fxFlex.lt-md="100"
         fxLayout="column"
-        style="padding: 10px;">
+        style="padding-right: 10px;">
+        <!-- display cover image here -->
         <mat-card>
-          <mat-card-title> {{ card.title }} </mat-card-title>
-          <mat-card-content> {{ card.description }} </mat-card-content>
+          <mat-card-title> {{ cardList[0].title }} </mat-card-title>
+          <mat-card-content> {{ cardList[0].description }} </mat-card-content>
           <mat-card-footer>
-            <button fxFlex mat-flat-button color="primary">Do Something Button</button>
+            <button fxFlex mat-flat-button color="primary"></button>
+          </mat-card-footer>
+        </mat-card>
+      </div>
+      <div
+        fxFlex="50"
+        fxFlex.lt-md="100"
+        fxLayout="column"
+        style="padding-left: 10px;">
+        <!-- display title, author, tags, and raised money etc... here -->
+        <mat-card>
+          <mat-card-title> {{ cardList[1].title }} </mat-card-title>
+          <mat-card-content> {{ cardList[1].description }} </mat-card-content>
+          <mat-card-footer>
+            <button fxFlex mat-flat-button color="warn">Support!</button>
           </mat-card-footer>
         </mat-card>
       </div>
     </div>
-    <div fxLayout="row">
-      <div fxFlex="grow" style="padding: 10px;">
+    <div class="summary-column" fxLayout="row">
+      <div class="summary-content" fxFlex="grow" style="padding: 10px;">
+        <!-- display summary data here -->
         <mat-card>
             <mat-card-title>Story</mat-card-title>
             <mat-card-content>Short summary</mat-card-content>
