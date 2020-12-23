@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { getAllJSDocTags } from 'typescript';
 
 @Component({
   selector: 'views-work-card',
@@ -8,7 +9,13 @@ import { Component, OnInit } from '@angular/core';
 export class WorkCardComponent implements OnInit {
   work = {
     title: "Starting over at 8",
-    tags: ["isekai", "tensei", "political", "magic", "majin"],
+    tags: [
+      {name:"isekai", type:"required"},
+      {name: "tensei", type:"required"},
+      {name: "political", type: "optional"},
+      {name: "magic", type: "optional"},
+      {name: "majin", type: "optional"},
+      ],
     author: "Yushi",
     description: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.",
     fund: 1234567
@@ -16,7 +23,6 @@ export class WorkCardComponent implements OnInit {
 
   constructor() { }
 
-  ngOnInit(): void {
-  }
+  ngOnInit(): void { }
 
 }
