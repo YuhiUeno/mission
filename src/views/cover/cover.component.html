@@ -1,4 +1,4 @@
-<div class="main-container" fxFlex fxLayout="row" style="width: 100vw;" fxLayoutAlign="center">
+<div class="main-container" fxFlex fxLayout="row" fxLayoutAlign="center">
   <div class="main-columns"
     style="height:100vh"
     fxFlex="80"
@@ -10,8 +10,7 @@
       <div class="work-image"
         fxFlex="50"
         fxFlex.lt-md="100"
-        fxLayout="column"
-        style="padding-right: 10px;"
+        fxLayout="column">
         <!-- display cover image here -->
         <mat-card>
           <mat-card-title> {{ cardList[0].title }} </mat-card-title>
@@ -24,8 +23,7 @@
       <div class="work-details"
         fxFlex="50"
         fxFlex.lt-md="100"
-        fxLayout="column"
-        style="padding-left: 10px;"
+        fxLayout="column">
         <!-- display title, author, tags, and raised money etc... here -->
         <mat-card>
           <mat-card-title> {{ cardList[1].title }} </mat-card-title>
@@ -37,7 +35,7 @@
       </div>
     </div>
     <div class="summary-column" fxLayout="row">
-      <div class="summary-content" fxFlex="grow" style="padding: 10px;">
+      <div class="summary-content" fxFlex="grow">
         <!-- display summary data here -->
         <mat-card>
             <mat-card-title>Story</mat-card-title>
