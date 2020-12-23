@@ -1,5 +1,42 @@
 <div class="cover-column" fxLayout="row wrap" fxLayoutAlign="center">
   <!-- ngClass.xs="work-image-mobile" -->
+  <div class="work-image-beta"
+    fxFlex="50"
+    fxFlex.xs=100
+    fxLayout="column">
+    <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg">
+  </div>
+  <div class="work-details"
+    fxFlex="50"
+    fxFlex.xs="100"
+    fxLayout="column">
+    <!-- display title, author, tags, and raised money etc... here -->
+    <mat-card>
+      <mat-card-title>{{work.title}}</mat-card-title>
+      <mat-card-content>
+        <div class="author"><h3>Author: <a href="/">{{work.author}}</a></h3></div>
+        <mat-chip-list aria-label="Tags">
+          <ng-container *ngFor="let tag of work.tags">
+            <mat-chip *ngIf="tag.type==='required';" color="accent" selected>{{tag.name}}</mat-chip>
+            <mat-chip *ngIf="tag.type==='optional';">{{tag.name}}</mat-chip>
+          </ng-container>
+        </mat-chip-list>
+        <div class="description-section">
+          <p>{{work.description}}</p>
+        </div>
+        <h2>{{work.fund | currency:'JPY'}}</h2>
+      </mat-card-content>
+      <mat-card-actions>
+        <button fxFlex mat-raised-button color="primary">Support!</button>
+        <button fxFlex mat-raised-button color="basic">Like ♡</button>
+      </mat-card-actions>
+    </mat-card>
+  </div>
+</div>
+
+
+<div class="cover-column" fxLayout="row wrap" fxLayoutAlign="center">
+  <!-- ngClass.xs="work-image-mobile" -->
   <div class="work-image"
     fxFlex="50"
     fxFlex.xs=100
