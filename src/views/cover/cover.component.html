@@ -4,9 +4,8 @@
   style="height:100vh"
   fxFlex="80"
   fxFlex.md="90"
-  fxFlex.lt-md="100"
-  fxLayoutAlign="start center">
-  <div fxLayout="row wrap">
+  fxFlex.lt-md="100">
+  <div fxLayout="row wrap" fxLayoutAlign="center">
     <div
       *ngFor="let card of cardList"
       fxFlex="50"
@@ -23,6 +22,7 @@
     </div>
   </div>
   <div
+    fxLayoutAlign="start center"
     fxFlex="grow"
     style="padding: 5px;">
     <mat-card>
