@@ -19,9 +19,8 @@
         <div class="author"><h3>Author: <a href="/">{{work.author}}</a></h3></div>
         <mat-chip-list aria-label="Tags">
           <div [class.alternate-chip]="isAlternateMode">
-            <mat-chip *ngFor="let tag of work.tags" color="primary"></mat-chip>
+            <mat-chip *ngFor="let tag of work.tags" color="primary">{{tag.name}}</mat-chip>
           </div>
-            {{tag.name}}
             <!--
             <mat-chip *ngIf="tag.type==='required';" color="primary">{{tag.name}}</mat-chip>
             <mat-chip *ngIf="tag.type==='optional';" color="basic">{{tag.name}}</mat-chip>
