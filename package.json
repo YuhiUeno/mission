@@ -4,7 +4,7 @@
   "scripts": {
     "ng": "ng",
     "start": "nodemon -L",
-    "test": "npx browser-sync start --config bs-config.js",
+    "bs": "npx browser-sync start --config bs-config.js",
     "build": "ng build",
     "lint": "ng lint",
     "e2e": "ng e2e"
