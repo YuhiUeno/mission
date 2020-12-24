@@ -46,23 +46,23 @@ div {
   }
 }
 
-.work-image {
+work-image {
   padding: 10px;
   width: 100%;
   height: auto;
   object-fit: contain;
 }
 
-.mat-card-actions {
+mat-card-actions {
   margin-top:0px;
   padding-top: 0px;
 }
 
-.mat-card {
+mat-card {
   box-shadow: none;
 }
 
-.mat-card-title {
+mat-card-title {
   @include gt-bp($md-min) {
     font-size: 2.5vw;
     line-height: 2.8vw;
@@ -70,6 +70,31 @@ div {
   @include lt-bp($md-min) {
     font-size: 24px;
     line-height: normal;
+  }
+}
+
+mat-chip {
+  @include gt-bp($md-min) {
+    font-size: 1.6vw;
+    min-height: 1.8vw;
+
+  }
+  @include lt-bp($md-min) {
+    font-size: 15px;
+    min-height: 32px;
+  }
+}
+
+h3 {
+  &.author {
+    @include gt-bp($md-min) {
+      font-size: 1.8vw;
+      line-height: 2vw;
+    }
+    @include lt-bp($md-min) {
+      font-size: 18px;
+      line-height: normal;
+    }
   }
 }
 
