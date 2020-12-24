@@ -1,36 +1,8 @@
-$sm-min: 600px;
-$md-min: 960px;
-$lg-min: 1280px;
-
-// Do content when greater than break point
-@mixin gt-bp($break-point) {
-  @media screen and (min-width: $break-point){
-    @content;
-  }
-}
-
-// Do content when less than break point
-@mixin lt-bp($break-point) { 
-  @media screen and (max-width: $break-point) {
-    @content;
-  }
-}
-
 div {
   &.main-container {
     padding-top: 40px;
   }
   &.summary-column {
     padding: 10px;
-  }
-  &.description-section {
-    // @include gt-bp($md-min) {
-    //   font-size: 1.6vw;
-    //   line-height: 1.8vw;
-    // }
-    @include lt-bp($md-min) {
-      font-size: 15px;
-      line-height: normal;
-    }
   }
 }

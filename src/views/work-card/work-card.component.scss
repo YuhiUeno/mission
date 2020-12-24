@@ -1,25 +1,50 @@
-.work-details {
-  padding: 10px;
+$sm-min: 600px;
+$md-min: 960px;
+$lg-min: 1280px;
+
+// Do content when greater than break point
+@mixin gt-bp($break-point) {
+  @media screen and (min-width: $break-point){
+    @content;
+  }
 }
 
-.author {
-  text-align: right;
+// Do content when less than break point
+@mixin lt-bp($break-point) { 
+  @media screen and (max-width: $break-point) {
+    @content;
+  }
 }
 
-.description-section {
-  margin-top: 20px;
+div {
+  &.work-details {
+    padding: 10px;
+  }
+  &.author {
+    text-align: right;
+  }
+  &.description-section {
+    margin-top: 20px;
+    @include gt-bp($md-min) {
+      font-size: 1.6vw;
+      line-height: 1.8vw;
+    }
+    @include lt-bp($md-min) {
+      font-size: 15px;
+      line-height: normal;
+    }
+  }
+  &.work-image {
+    padding: 10px;
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+  }
 }
 
 .mat-card-actions {
   margin-top:0px;
   padding-top: 0px;
-}
-
-.work-image {
-  padding: 10px;
-  width: 100%;
-  height: auto;
-  object-fit: contain;
 }
 
 .mat-card {
