@@ -17,7 +17,7 @@ div {
     padding: 10px;
   }
   &.description-section {
-    @include gt-bp($sm-min) {
+    @include gt-bp($md-min) {
       font-size: 1.6vw;
       line-height: 1.8vw;
     }
