@@ -1,12 +1,8 @@
-
-.main-container {
-  padding-top: 40px;
-}
-
-.work-image {
-  padding-right: 10px;
-}
-
-.work-details {
-  padding-left: 10px;
+div {
+  &.main-container {
+    padding-top: 40px;
+  }
+  &.summary-column {
+    padding: 10px;
+  }
 }

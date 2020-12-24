@@ -22,9 +22,11 @@ import { MatButtonModule } from '@angular/material/button'
 import { MatIconModule } from '@angular/material/icon'
 import { MatTabsModule } from '@angular/material/tabs'
 import { MatCardModule } from '@angular/material/card'
+import { MatChipsModule } from '@angular/material/chips'
 
 import { FlexLayoutModule } from '@angular/flex-layout';
-import { CoverComponent } from './cover/cover.component'
+import { CoverComponent } from './cover/cover.component';
+import { WorkCardComponent } from './work-card/work-card.component'
 
 @NgModule({
   declarations: [
@@ -36,6 +38,7 @@ import { CoverComponent } from './cover/cover.component'
     HeroSearchComponent,
     LogoComponent,
     CoverComponent,
+    WorkCardComponent,
   ],
   imports: [
     BrowserModule,
@@ -49,7 +52,8 @@ import { CoverComponent } from './cover/cover.component'
     MatIconModule,
     MatTabsModule,
     MatCardModule,
-    FlexLayoutModule
+    FlexLayoutModule,
+    MatChipsModule
     
 
     // HttpClientInMemoryWebApiModule.forRoot(

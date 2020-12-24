@@ -1,48 +1,18 @@
 <div class="main-container" fxFlex fxLayout="row" fxLayoutAlign="center">
   <div class="main-columns"
-    style="height:100vh"
     fxFlex="80"
     fxFlex.md="90"
     fxFlex.lt-md="100"
     fxLayout="column"
     fxLayoutGap="10px">
-    <div fxLayout="row wrap" class="cover-column">
-      <div class="work-image"
-        fxFlex="50"
-        fxFlex.lt-md="100"
-        fxLayout="column">
-        <!-- display cover image here -->
-        <mat-card>
-          <mat-card-title> {{ cardList[0].title }} </mat-card-title>
-          <mat-card-content> {{ cardList[0].description }} </mat-card-content>
-          <mat-card-footer>
-            <button fxFlex mat-flat-button color="primary">This will be an image area</button>
-          </mat-card-footer>
-        </mat-card>
-      </div>
-      <div class="work-details"
-        fxFlex="50"
-        fxFlex.lt-md="100"
-        fxLayout="column">
-        <!-- display title, author, tags, and raised money etc... here -->
-        <mat-card>
-          <mat-card-title> {{ cardList[1].title }} </mat-card-title>
-          <mat-card-content> {{ cardList[1].description }} </mat-card-content>
-          <mat-card-footer>
-            <button fxFlex mat-flat-button color="warn">Support!</button>
-          </mat-card-footer>
-        </mat-card>
-      </div>
-    </div>
+    <views-work-card></views-work-card>
     <div class="summary-column" fxLayout="row">
       <div class="summary-content" fxFlex="grow">
-        <!-- display summary data here -->
         <mat-card>
-            <mat-card-title>Story</mat-card-title>
-            <mat-card-content>Short summary</mat-card-content>
-            <mat-card-footer>
-              <button fxFlex mat-flat-button color="accent">Support me!</button>
-            </mat-card-footer>
+            <mat-card-title>Short summary</mat-card-title>
+            <mat-card-content>
+              Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean. A small river named Duden flows by their place and supplies it with the necessary regelialia.
+            </mat-card-content>
         </mat-card>
       </div>
     </div>
