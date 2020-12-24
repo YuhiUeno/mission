@@ -24,10 +24,10 @@ div {
     padding: 10px;
   }
   &.description-section {
-    @include gt-bp($md-min) {
-      font-size: 1.6vw;
-      line-height: 1.8vw;
-    }
+    // @include gt-bp($md-min) {
+    //   font-size: 1.6vw;
+    //   line-height: 1.8vw;
+    // }
     @include lt-bp($md-min) {
       font-size: 15px;
       line-height: normal;
