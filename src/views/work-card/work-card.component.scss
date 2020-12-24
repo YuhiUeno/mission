@@ -34,12 +34,13 @@ div {
       line-height: normal;
     }
   }
-  &.work-image {
-    padding: 10px;
-    width: 100%;
-    height: auto;
-    object-fit: contain;
-  }
+}
+
+.work-image {
+  padding: 10px;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
 }
 
 .mat-card-actions {
