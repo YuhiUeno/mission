@@ -34,7 +34,7 @@ div {
       line-height: normal;
     }
   }
-  &.fund-section .h2{
+  &.fund-section h2{
     @include gt-bp($md-min) {
       font-size: 2vw;
       line-height: 2.2vw;
