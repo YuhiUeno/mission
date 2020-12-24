@@ -24,7 +24,9 @@
         <div class="description-section">
           <p>{{work.description}}</p>
         </div>
-        <h2>{{work.fund | currency:'JPY'}}</h2>
+        <div class="fund-section">
+          <h2>{{work.fund | currency:'JPY'}}</h2>
+        </div>
       </mat-card-content>
       <mat-card-actions>
         <button fxFlex mat-raised-button color="primary">Support!</button>

@@ -34,6 +34,16 @@ div {
       line-height: normal;
     }
   }
+  &.fund-section .h2{
+    @include gt-bp($md-min) {
+      font-size: 2vw;
+      line-height: 2.2vw;
+    }
+    @include lt-bp($md-min) {
+      font-size: 20px;
+      line-height: normal;
+    }
+  }
 }
 
 .work-image {
@@ -54,11 +64,12 @@ div {
 
 .mat-card-title {
   @include gt-bp($md-min) {
-    font-size: 4vw;
-    line-height: 4.2vw;
+    font-size: 2.5vw;
+    line-height: 2.8vw;
   }
   @include lt-bp($md-min) {
     font-size: 24px;
     line-height: normal;
   }
 }
+
