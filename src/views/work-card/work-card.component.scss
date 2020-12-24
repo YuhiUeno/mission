@@ -46,7 +46,6 @@ div {
   }
 }
 
-
 .work-image {
   padding: 10px;
   width: 100%;
@@ -60,11 +59,11 @@ mat-card-actions {
   padding-top: 0px;
 }
 
-mat-card {
+.mat-card {
   box-shadow: none;
 }
 
-mat-card-title {
+.mat-card-title {
   @include gt-bp($md-min) {
     font-size: 2.5vw;
     line-height: 2.8vw;
@@ -75,7 +74,7 @@ mat-card-title {
   }
 }
 
-mat-chip {
+.mat-chip {
   @include gt-bp($md-min) {
     font-size: 1.6vw;
     min-height: 1.8vw;
