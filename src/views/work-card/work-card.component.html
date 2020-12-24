@@ -21,8 +21,8 @@
             <mat-chip *ngIf="tag.type==='optional';">{{tag.name}}</mat-chip>
           </ng-container>
         </mat-chip-list>
-        <div class="description-section" ngClass.gt-md="description-section gt-md">
-          <p style="font-size: 1.6vw; line-height: 1.8vw;">{{work.description}}</p>
+        <div class="description-section">
+          <p>{{work.description}}</p>
         </div>
         <h2>{{work.fund | currency:'JPY'}}</h2>
       </mat-card-content>

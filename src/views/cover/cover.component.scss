@@ -1,3 +1,13 @@
+$sm-min: 600px;
+$md-min: 960px;
+$lg-min: 1280px;
+
+// Do content when greater than break point
+@mixin gt-bp($break-point) {
+  @media screen and (min-width: $break-point){
+    @content;
+  }
+}
 
 div {
   &.main-container {
@@ -7,11 +17,9 @@ div {
     padding: 10px;
   }
   &.description-section {
-    font-size: 1.6vw;
-    line-height: 1.8vw;
-  }
-  &.gt-md {
-    font-size: 4.6vw;
-    line-height: 4.8vw;
+    @include gt-bp($breakpoint-sm) {
+      font-size: 1.6vw;
+      line-height: 1.8vw;
+    }
   }
 }
