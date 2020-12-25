@@ -9,6 +9,7 @@ export const connect = () => {
     const URI = 'mongodb://127.0.0.1:27017/heroes'
 
     if (database) {
+        console.log('Check your URI')
         return
     }
 
