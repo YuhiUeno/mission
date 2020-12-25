@@ -6,8 +6,8 @@ import { Counter } from './counters/counters.types'
 let database: Mongoose.Connection
 
 export const connect = () => {
-    const URI = 'mongodb://127.0.0.1:27017/?compressors=disabled&gssapiServiceName=mongodb'
-
+    console.log('Where are you?')
+    const URI = 'mongodb://127.0.0.1:27017/heroes'
     if (database) {
         console.log('Check your URI')
         return
