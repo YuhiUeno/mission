@@ -7,7 +7,8 @@
 import * as debug from 'debug'
 import * as http from 'http'
 import { app } from '../app'
-import * as db from '../models/db'
+import * as db from '../database/db'
+import { connect } from '../database/db'
 
 /**
  * Get port from environment and store in Express.
@@ -26,11 +27,16 @@ const server = http.createServer(app);
  * Listen on provided port, on all network interfaces.
  */
 
-db.connect().then(() => {
-    server.listen(port);
-    server.on('error', onError);
-    server.on('listening', onListening);
+// mongodb connection
+connect()
+
+// serve
+server.listen(port, () => {
+    console.log(`Server started on http://192.168.33.10:${port}`)
 })
+server.on('error', onError)
+server.on('listening', onListening)
+
 
 
 /**

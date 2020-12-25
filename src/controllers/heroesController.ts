@@ -1,6 +1,6 @@
 import { Request, Response, NextFunction } from 'express';
 
-import * as db from '../models/db'
+import * as db from '../database/db'
 
 export class HeroesController {
     index = {
