@@ -3,18 +3,16 @@ import * as Mongoose from 'mongoose'
 import { Hero } from './heroes/heroes.types'
 import { Counter } from './counters/counters.types'
 
-// connect to mongodb
-const MONGODB_URI = 'mongodb://127.0.0.1:27017/heroes'
 let database: Mongoose.Connection
 
 export const connect = () => {
-    const MONGODB_URI = 'mongodb://127.0.0.1:27017/heroes'
+    const URI = 'mongodb://127.0.0.1:27017/heroes'
 
     if (database) {
         return
     }
 
-    Mongoose.connect(MONGODB_URI, {
+    Mongoose.connect(URI, {
         useNewUrlParser: true,
         useFindAndModify: true,
         useUnifiedTopology: true,
