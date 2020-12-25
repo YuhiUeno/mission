@@ -13,7 +13,7 @@ const HeroSchema = new Schema({
         type: Date,
         default: new Date()
     }
-}, {collection: 'heroes'})
+})
 
 HeroSchema.statics.findOneOrCreate = findOneOrCreate
 HeroSchema.statics.findById = findByHeroId
