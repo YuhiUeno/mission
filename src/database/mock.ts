@@ -18,9 +18,9 @@ const HEROES: Hero[] = [
 async function addMock() {
     connect()
     try {
-        for (const hero of HEROES) {
-            await HeroModel.insertMany(HEROES)
-        }
+        await HeroModel.insertMany(HEROES)
+        console.log('Heroes are registered.')
+
         disconnect()
     } catch (e) {
         console.error(e)
