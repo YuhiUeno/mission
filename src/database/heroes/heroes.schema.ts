@@ -14,6 +14,7 @@ const HeroSchema = new Schema({
         default: new Date()
     }
 })
+HeroSchema.index({heroId: 1, unique: true})
 
 HeroSchema.statics.findOneOrCreate = findOneOrCreate
 HeroSchema.statics.findById = findByHeroId
