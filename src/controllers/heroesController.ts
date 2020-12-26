@@ -4,9 +4,10 @@ import { HeroModel } from '../database/heroes/heroes.model'
 export class HeroesController {
     index = {
         get: async (req: Request, res: Response, next: NextFunction) => {
-            console.log(req.query)
-            if (req.params.name) {
-                console.log(req.params.name)
+            const name = req.query.name
+            if (name) {
+                const regexp = RegExp(name + '')
+                res.json(await HeroModel.find({name: {$regex: regexp, $options: 'i'}}))
             } else {
                 res.json(await HeroModel.getHeroes())
             }
