@@ -1,13 +1,14 @@
+import { CounterModel } from "./database/counters/counters.model";
 import { connect, disconnect } from "./database/db";
 import { HeroModel } from "./database/heroes/heroes.model";
 
-async function check(id: number) {
+async function check() {
     connect()
     // const hero = new HeroModel({name: "Narco"})
-    console.log(await HeroModel.getHero(id))
-    await HeroModel.addHero('Voldemort')
+    console.log(await CounterModel.find({key: "heroId"}))
+    
 
     disconnect()
 }
 
-check(15)
+check()
