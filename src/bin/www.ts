@@ -7,7 +7,7 @@
 import * as debug from 'debug'
 import * as http from 'http'
 import { app } from '../app'
-import * as db from '../database/db'
+// import * as db from '../database/db'
 import { connect } from '../database/db'
 
 /**

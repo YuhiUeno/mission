@@ -1,7 +1,7 @@
 import { Document } from "mongoose"
-import { HeroDocument } from "./heroes.types"
+import { IHeroDocument } from "./heroes.types"
 
-export async function setLastUpdate(this: HeroDocument) :Promise<void> {
+export async function setLastUpdate(this: IHeroDocument) :Promise<void> {
     const now = new Date()
     if (!this.lastUpdated || this.lastUpdated < now) {
         this.lastUpdated = now
@@ -9,6 +9,6 @@ export async function setLastUpdate(this: HeroDocument) :Promise<void> {
     }
 }
 
-export async function sameName(this: HeroDocument): Promise<Document[]> {
+export async function sameName(this: IHeroDocument): Promise<Document[]> {
     return this.model("hero").find( {name: this.name} )
 }

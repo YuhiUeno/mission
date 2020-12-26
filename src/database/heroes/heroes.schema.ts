@@ -1,5 +1,5 @@
 import { Schema } from "mongoose"
-import { findOneOrCreate, findByHeroId } from "./heroes.statics"
+import { findOneOrCreate, findByHeroId, addHero, deleteHero, getHero, getHeroes } from "./heroes.statics"
 import { setLastUpdate, sameName } from "./heroes.methods"
 
 const HeroSchema = new Schema({
@@ -14,10 +14,14 @@ const HeroSchema = new Schema({
         default: new Date()
     }
 })
-HeroSchema.index({heroId: 1, unique: true})
 
 HeroSchema.statics.findOneOrCreate = findOneOrCreate
 HeroSchema.statics.findById = findByHeroId
+
+HeroSchema.statics.getHeroes = getHeroes
+HeroSchema.statics.getHero = getHero
+HeroSchema.statics.addHero = addHero
+HeroSchema.statics.deleteHero = deleteHero
 
 HeroSchema.methods.setLastUpdate = setLastUpdate
 HeroSchema.methods.sameName = sameName

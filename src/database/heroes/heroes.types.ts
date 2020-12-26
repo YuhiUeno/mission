@@ -1,21 +1,21 @@
 import { Document, Model } from "mongoose"
 
 
-export interface Hero {
+export interface IHero {
     heroId: number
     name: string
     dateOfEntry?: Date
     lastUpdated?: Date
 }
 
-export interface HeroDocument extends Hero, Document {
-    setLastUpdated: (this: HeroDocument) => Promise<void>
-    sameName: (this: HeroDocument) => Promise<Document[]>
+export interface IHeroDocument extends IHero, Document {
+    setLastUpdated: (this: IHeroDocument) => Promise<void>
+    sameName: (this: IHeroDocument) => Promise<Document[]>
 }
 
-export interface HeroModel extends Model<HeroDocument> {
+export interface IHeroModel extends Model<IHeroDocument> {
     findOneOrCreate: (
-        this: HeroModel,
+        this: IHeroModel,
         {
             heroId,
             name
@@ -23,11 +23,36 @@ export interface HeroModel extends Model<HeroDocument> {
             heroId: number
             name: string
         }
-    ) => Promise<HeroDocument>
+    ) => Promise<IHeroDocument>
 
     findByHeroId: (
-        this: HeroModel,
+        this: IHeroModel,
         min?: number,
         max?: number
-    ) => Promise<HeroDocument[]>
+    ) => Promise<IHeroDocument[]>
+
+    getHeroes: (
+        this: IHeroModel,
+    ) => Promise<IHeroDocument>
+
+    getHero: (
+        this: IHeroModel,
+        heroId: number
+    ) => Promise<IHeroDocument>
+
+    updateHeroName: (
+        this: IHeroModel,
+        heroId: number,
+        name: String
+    ) => Promise<void>
+
+    addHero: (
+        this: IHeroModel,
+        name: String
+    ) => Promise<void>
+
+    deleteHero: (
+        this: IHeroModel,
+        heroId: number
+    ) => Promise<IHeroDocument>
 }

@@ -1,7 +1,5 @@
 // import { MongoClient, Collection } from 'mongodb'
 import * as Mongoose from 'mongoose'
-import { Hero } from './heroes/heroes.types'
-import { Counter } from './counters/counters.types'
 
 let database: Mongoose.Connection
 
