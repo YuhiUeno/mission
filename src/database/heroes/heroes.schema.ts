@@ -16,17 +16,17 @@ const HeroSchema = new Schema({
 })
 
 // statics
-HeroSchema.statics.findOneOrCreate = findOneOrCreate
-HeroSchema.statics.findById = findByHeroId
+HeroSchema.statics.findOneOrCreate = findOneOrCreate;
+HeroSchema.statics.findById = findByHeroId;
 
-HeroSchema.statics.getHeroes = getHeroes
-HeroSchema.statics.getHero = getHero
-HeroSchema.statics.addHero = addHero
-HeroSchema.statics.deleteHero = deleteHero
+HeroSchema.statics.getHeroes = getHeroes;
+HeroSchema.statics.getHero = getHero;
+HeroSchema.statics.addHero = addHero;
+HeroSchema.statics.deleteHero = deleteHero;
 
 
 // methods
-HeroSchema.methods.setLastUpdate = setLastUpdate
-HeroSchema.methods.sameName = sameName
+HeroSchema.methods.setLastUpdate = setLastUpdate;
+HeroSchema.methods.sameName = sameName;
 
 export { HeroSchema }

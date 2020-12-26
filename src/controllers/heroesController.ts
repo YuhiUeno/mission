@@ -26,8 +26,8 @@ export class HeroesController {
         },
         put: async (req: Request, res: Response, next: NextFunction) => {
             try {
-                // await HeroModel.updateHeroName(parseInt(req.body.heroId), req.body.name)
-                await updateHeroName(parseInt(req.body.heroId), req.body.name)
+                await HeroModel.updateHeroName(parseInt(req.body.heroId), req.body.name)
+                // await updateHeroName(parseInt(req.body.heroId), req.body.name)
                 res.status(200).json({message: 'hero name updated'})
 
             } catch (err) {
