@@ -23,17 +23,18 @@ export async function getHero(this: IHeroModel, heroId: number): Promise<IHeroDo
 };
 
 export async function updateHeroName(this: IHeroModel, heroId: number, name: string): Promise<void> {
-    await this.updateOne({heroId: heroId}, {$set: {name: name}});
+    let doc = await this.findOneAndUpdate({heroId: heroId}, {name: name}, {new: true});
+    console.log(doc)
 };
 
 export async function addHero(this: IHeroModel, name: string): Promise<void> {
-    await CounterModel.findOneAndUpdate(
+    let doc = await CounterModel.findOneAndUpdate(
         {key: "heroId"},
         {$inc: {seq: 1}},
         {upsert: true},
     );
-    
-    console.log(await CounterModel.findOne({key: "heroId"}));
+
+    console.log(doc.seq);
     await this.create({heroId: null, name: name});
     
     // const seq = result.seq
