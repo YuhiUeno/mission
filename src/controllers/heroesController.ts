@@ -6,6 +6,7 @@ export class HeroesController {
         get: async (req: Request, res: Response, next: NextFunction) => {
             const name = req.query.name
             if (name) {
+                // you can chage regexp if you want a higher-quality search
                 const regexp = RegExp(name + '')
                 res.json(await HeroModel.find({name: {$regex: regexp, $options: 'i'}}))
             } else {
@@ -55,42 +56,3 @@ export class HeroesController {
         }
     }
 }
-
-// export async function getHeroes() {
-//     return await db.collections.hero.find().toArray()
-// }
-
-// export async function getHero(id: number) {
-//     const hero = await db.collections.hero.findOne({_id: id})
-//     if (hero) {
-//         // return {
-//         //     id: hero._id,
-//         //     name: hero.name
-//         // }
-//         return hero
-//     } else {
-//         throw new Error("That hero does't exist.")
-//     }
-// }
-
-// export async function updateHeroName(id: number, name: string) {
-//     await db.collections.hero.updateOne(
-//         {_id: id}, 
-//         {$set: {name: name}}
-//     )
-// }
-
-// export async function addHero(name: string) {
-//     const result = await db.collections.counter.findOneAndUpdate(
-//         {key: "hero_id"},
-//         {$inc: {seq: 1}},
-//         {upsert: true, returnOriginal: true},
-//     )
-//     const hero = {_id: result.value.seq, name: name}
-//     await db.collections.hero.insertOne(hero)
-//     return hero
-// }
-
-// export async function deleteHero(id: number) {
-//     await db.collections.hero.deleteOne({_id: id})
-// }

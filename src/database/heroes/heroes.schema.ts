@@ -3,8 +3,8 @@ import { findOneOrCreate, findByHeroId, addHero, deleteHero, getHero, getHeroes 
 import { setLastUpdate, sameName } from "./heroes.methods"
 
 const HeroSchema = new Schema({
-    heroId: Number,
-    name: String,
+    heroId: {type: Number, unique: true},
+    name: {type: String, required: true},
     dateOfEntry: {
         type: Date,
         default: new Date()
