@@ -3,8 +3,8 @@ import { HeroModel } from "./database/heroes/heroes.model";
 
 async function check(id: number) {
     connect()
-    const hero = new HeroModel()
-    console.log(await hero.getHero(id))
+    const hero = new HeroModel({name: "Narco"})
+    console.log(await hero.sameName())
 
     disconnect()
 }
