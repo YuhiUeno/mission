@@ -1,12 +1,12 @@
 import { connect, disconnect } from "./database/db";
 import { HeroModel } from "./database/heroes/heroes.model";
 
-async function check(id: number) {
+async function check() {
     connect()
     const hero = new HeroModel({name: "Narco"})
-    console.log(await hero.sameName())
+    console.log(await hero.getHeroes())
 
     disconnect()
 }
 
-check(13)
+check()
