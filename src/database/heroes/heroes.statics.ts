@@ -23,7 +23,8 @@ export async function getHero(this: IHeroModel, heroId: number): Promise<IHeroDo
 };
 
 export async function updateHeroName(this: IHeroModel, heroId: number, name: string): Promise<void> {
-    let doc = await this.findOneAndUpdate({heroId: heroId}, {name: name}, {new: true});
+    const arrow = () => {this.findOneAndUpdate({heroId: heroId}, {name: name}, {new: true})}
+    const doc = await arrow()
     console.log(doc)
 };
 
