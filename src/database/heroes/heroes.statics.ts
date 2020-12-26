@@ -49,14 +49,21 @@ export async function addHero(
     this: IHeroModel,
     name: string
 ): Promise<void> {
-    const result = await CounterModel.findOneAndUpdate(
+    CounterModel.findOneAndUpdate(
         {key: "heroId"},
         {$inc: {seq: 1}},
         {upsert: true, returnOriginal: true},
+        (error, result) => {
+            if (error) {
+                throw error
+            }
+            console.log(result.seq)
+            this.create({heroId: result.seq, name: name})
+        }
     )
-    const seq = result.seq
-    await this.create({heroId: seq, name: name})
-    console.log(seq)
+    // const seq = result.seq
+    // await this.create({heroId: seq, name: name})
+    // console.log(seq)
 }
 
 export async function deleteHero(
