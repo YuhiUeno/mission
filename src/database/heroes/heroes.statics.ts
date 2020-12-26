@@ -28,11 +28,17 @@ export async function getHeroes(
     return this.find()
 }
 
-export async function getHero(this: IHeroModel, heroId: number): Promise<IHeroDocument> {
+export async function getHero(
+    this: IHeroModel,
+    heroId: number
+): Promise<IHeroDocument> {
     return this.findOne({heroId: heroId})
 }
 
-export async function updateHeroName(this: IHeroModel, heroId: number, name: string): Promise<void> {
+export async function updateHeroName(this: IHeroModel,
+    heroId: number,
+    name: string
+): Promise<void> {
     this.updateOne(
         {heroId: heroId}, 
         {$set: {name: name}}
