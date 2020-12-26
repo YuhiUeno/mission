@@ -23,6 +23,10 @@ HeroSchema.statics.getHero = getHero
 HeroSchema.statics.addHero = addHero
 HeroSchema.statics.deleteHero = deleteHero
 
+HeroSchema.statics.hello = async () => {
+    console.log('Hello, world!')
+}
+
 HeroSchema.methods.setLastUpdate = setLastUpdate
 HeroSchema.methods.sameName = sameName
 

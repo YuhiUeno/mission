@@ -55,4 +55,6 @@ export interface IHeroModel extends Model<IHeroDocument> {
         this: IHeroModel,
         heroId: number
     ) => Promise<IHeroDocument>
+
+    hello: () => any
 }
