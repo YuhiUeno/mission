@@ -15,6 +15,10 @@ const HeroSchema = new Schema({
     }
 })
 
+// methods
+HeroSchema.methods.setLastUpdate = setLastUpdate;
+HeroSchema.methods.sameName = sameName;
+
 // statics
 HeroSchema.statics.findOneOrCreate = findOneOrCreate;
 HeroSchema.statics.findById = findByHeroId;
@@ -24,10 +28,5 @@ HeroSchema.statics.getHero = getHero;
 HeroSchema.statics.addHero = addHero;
 HeroSchema.statics.updateHeroName = updateHeroName;
 HeroSchema.statics.deleteHero = deleteHero;
-
-
-// methods
-HeroSchema.methods.setLastUpdate = setLastUpdate;
-HeroSchema.methods.sameName = sameName;
 
 export { HeroSchema }

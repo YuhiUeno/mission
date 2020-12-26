@@ -1,8 +1,7 @@
 import { Request, Response, NextFunction } from 'express'
-import { CounterModel } from '../database/counters/counters.model'
 import { HeroModel } from '../database/heroes/heroes.model'
 
-export class HeroesController {
+export class HeroController {
     index = {
         get: async (req: Request, res: Response, next: NextFunction) => {
             const name = req.query.name
@@ -60,8 +59,3 @@ export class HeroesController {
         }
     }
 }
-
-
-export async function updateHeroName(heroId: number, name: string): Promise<void> {
-    await HeroModel.findOneAndUpdate({heroId: heroId}, {name: name}, {new: true});
-};

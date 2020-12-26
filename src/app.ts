@@ -4,8 +4,8 @@ import * as cookieParser from 'cookie-parser'
 import * as logger from 'morgan'
 
 import {router as indexRouter} from './routes/indexRouter';
-import {router as usersRouter} from './routes/usersRouter';
-import {router as heroesRouter} from './routes/heroesRouter';
+import {router as usersRouter} from './routes/users.router';
+import {router as heroesRouter} from './routes/heroes.router';
 
 const app = express()
 
