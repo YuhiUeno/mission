@@ -55,7 +55,7 @@ export async function addHero(
         {upsert: true, returnOriginal: true},
     )
     await this.create({heroId: result.seq, name: name})
-    return await this.findOne({heroId: result.seq})
+    return this.findOne({heroId: result.seq})
 }
 
 export async function deleteHero(
