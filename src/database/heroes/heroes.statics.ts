@@ -52,7 +52,7 @@ export async function addHero(
     CounterModel.findOneAndUpdate(
         {key: "heroId"},
         {$inc: {seq: 1}},
-        {upsert: true, returnOriginal: true},
+        {upsert: true, rawResult: true},
         (error, result) => {
             if (error) {
                 throw error
