@@ -1,5 +1,5 @@
 import { Request, Response, NextFunction } from 'express'
-import { CounterModel } from 'src/database/counters/counters.model'
+import { CounterModel } from '../database/counters/counters.model'
 import { HeroModel } from '../database/heroes/heroes.model'
 
 export class HeroesController {
@@ -19,7 +19,6 @@ export class HeroesController {
                 const name = req.body.name
                 await HeroModel.addHero(req.body.name)
                 const count = await CounterModel.findOne({key: "heroId"})
-                console.log(count.seq)
                 res.json({heroId: count.seq, name: name})
             } catch (err) {
                 res.status(400).send({error: err.message})
