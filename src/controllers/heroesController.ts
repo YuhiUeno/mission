@@ -19,7 +19,9 @@ export class HeroesController {
                 const name = req.body.name
                 await HeroModel.addHero(req.body.name)
                 const counter = await CounterModel.findOne({key: "heroId"})
-                res.json(await HeroModel.getHero(counter.seq))
+                const hero = await HeroModel.getHero(counter.seq)
+                console.log(hero)
+                res.json(hero)
             } catch (err) {
                 res.status(400).send({error: err.message})
             }
