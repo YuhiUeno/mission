@@ -15,6 +15,7 @@ const HeroSchema = new Schema({
     }
 })
 
+// statics
 HeroSchema.statics.findOneOrCreate = findOneOrCreate
 HeroSchema.statics.findById = findByHeroId
 
@@ -23,11 +24,14 @@ HeroSchema.statics.getHero = getHero
 HeroSchema.statics.addHero = addHero
 HeroSchema.statics.deleteHero = deleteHero
 
-HeroSchema.statics.hello = async () => {
-    console.log('Hello, world!')
-}
 
+// methods
 HeroSchema.methods.setLastUpdate = setLastUpdate
 HeroSchema.methods.sameName = sameName
+
+HeroSchema.methods.getHeroes = getHeroes
+HeroSchema.methods.getHero = getHero
+HeroSchema.methods.addHero = addHero
+HeroSchema.methods.deleteHero = deleteHero
 
 export { HeroSchema }
