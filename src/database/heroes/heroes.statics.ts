@@ -8,9 +8,9 @@ export async function findOneOrCreate(
 ): Promise<IHeroDocument> {
     const record = await this.findOne({ heroId: heroId });
     if (record) {
-        return record
+        return record;
     } else {
-        return this.create({ heroId: heroId, name: name })
+        return this.create({ heroId: heroId, name: name });
     }
 };
 
@@ -19,30 +19,30 @@ export async function findByHeroId(
     min?: number,
     max?: number
 ): Promise<IHeroDocument[]> {
-    return this.find({ heroId: {$gte: min || 11, $lte: max || Infinity} })
+    return this.find({ heroId: {$gte: min || 11, $lte: max || Infinity} });
 };
 
 export async function getHeroes(
     this: IHeroModel
 ): Promise<IHeroDocument[]> {
-    return this.find()
+    return this.find();
 };
 
 export async function getHero(
     this: IHeroModel,
     heroId: number
 ): Promise<IHeroDocument> {
-    return this.findOne({heroId: heroId})
+    return this.findOne({heroId: heroId});
 };
 
 export async function updateHeroName(this: IHeroModel,
     heroId: number,
     name: string
 ): Promise<void> {
-    this.updateOne(
+    await this.updateOne(
         {heroId: heroId}, 
         {$set: {name: name}}
-    )
+    );
 };
 
 export async function addHero(
@@ -53,10 +53,10 @@ export async function addHero(
         {key: "heroId"},
         {$inc: {seq: 1}},
         {upsert: true},
-    )
+    );
     
-    console.log(await CounterModel.findOne({key: "heroId"}))
-    await this.create({heroId: null, name: name})
+    console.log(await CounterModel.findOne({key: "heroId"}));
+    await this.create({heroId: null, name: name});
     
     // const seq = result.seq
     // await this.create({heroId: seq, name: name})
@@ -67,5 +67,5 @@ export async function deleteHero(
     this: IHeroModel,
     heroId: number
 ): Promise<IHeroDocument> {
-    return this.findOneAndDelete({heroId: heroId})
+    return this.findOneAndDelete({heroId: heroId});
 };
