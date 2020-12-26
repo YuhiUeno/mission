@@ -14,12 +14,12 @@ export interface IHeroDocument extends IHero, Document {
 
     getHeroes: (
         this: IHeroDocument,
-    ) => Promise<IHeroDocument>
+    ) => Promise<Document>
 
     getHero: (
         this: IHeroDocument,
         heroId: number
-    ) => Promise<IHeroDocument>
+    ) => Promise<Document>
 
     updateHeroName: (
         this: IHeroDocument,
@@ -35,7 +35,7 @@ export interface IHeroDocument extends IHero, Document {
     deleteHero: (
         this: IHeroDocument,
         heroId: number
-    ) => Promise<IHeroDocument>
+    ) => Promise<Document>
 }
 
 export interface IHeroModel extends Model<IHeroDocument> {

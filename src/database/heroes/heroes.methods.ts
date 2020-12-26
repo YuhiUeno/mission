@@ -19,14 +19,14 @@ export async function sameName(this: IHeroDocument): Promise<Document[]> {
 
 export async function getHeroes(
     this: IHeroDocument
-): Promise<IHeroDocument[]> {
+): Promise<Document[]> {
     return this.model("hero").find()
 }
 
 export async function getHero(
     this: IHeroDocument,
     heroId: number
-): Promise<IHeroDocument> {
+): Promise<Document> {
     return this.model("hero").findOne({heroId: heroId})
 }
 
@@ -56,6 +56,6 @@ export async function addHero(
 export async function deleteHero(
     this: IHeroDocument,
     heroId: number
-): Promise<IHeroDocument> {
+): Promise<Document> {
     return this.model("hero").findOneAndDelete({heroId: heroId})
 }
