@@ -35,7 +35,8 @@ export async function getHero(
     return this.findOne({heroId: heroId})
 }
 
-export async function updateHeroName(this: IHeroModel,
+export async function updateHeroName(
+    this: IHeroModel,
     heroId: number,
     name: string
 ): Promise<void> {
