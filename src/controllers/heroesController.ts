@@ -15,7 +15,8 @@ export class HeroesController {
         },
         post: async (req: Request, res: Response, next: NextFunction) => {
             try {
-                res.json(await HeroModel.addHero(req.body.name))
+                const hero = await HeroModel.addHero(req.body.name)
+                res.json(hero)
             } catch (err) {
                 res.status(400).send({error: err.message})
             }
