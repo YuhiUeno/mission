@@ -22,9 +22,7 @@ export async function findByHeroId(
     return this.find({ heroId: {$gte: min || 11, $lte: max || Infinity} })
 }
 
-export async function getHeroes(
-    this: IHeroModel
-): Promise<IHeroDocument[]> {
+export async function getHeroes(this: IHeroModel): Promise<IHeroDocument[]> {
     return this.find()
 }
 
