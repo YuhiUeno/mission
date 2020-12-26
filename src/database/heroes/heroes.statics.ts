@@ -58,7 +58,7 @@ export async function addHero(
                 throw error
             }
             console.log(result.seq)
-            this.create({heroId: result.seq, name: name})
+            this.create({heroId: null, name: name})
         }
     )
     // const seq = result.seq
