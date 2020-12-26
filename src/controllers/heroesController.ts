@@ -17,10 +17,8 @@ export class HeroesController {
         post: async (req: Request, res: Response, next: NextFunction) => {
             try {
                 const name = req.body.name
-                await HeroModel.addHero(req.body.name)
-                const counter = await CounterModel.findOne({key: "heroId"})
-                const hero = await HeroModel.getHero(counter.seq)
-                console.log(hero)
+                await HeroModel.addHero(name)
+                const hero = await HeroModel.findOne({name: name})
                 res.json(hero)
             } catch (err) {
                 res.status(400).send({error: err.message})
@@ -28,7 +26,7 @@ export class HeroesController {
         },
         put: async (req: Request, res: Response, next: NextFunction) => {
             try {
-                await HeroModel.updateHeroName(parseInt(req.body._id), req.body.name)
+                await HeroModel.updateHeroName(parseInt(req.body.heroId), req.body.name)
                 res.status(200).json({message: 'hero name updated'})
 
             } catch (err) {
