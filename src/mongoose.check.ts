@@ -1,11 +1,11 @@
 import { connect, disconnect } from "./database/db";
 import { HeroModel } from "./database/heroes/heroes.model";
 
-async function check(id: number) {
+async function check(min: number, max: number) {
     connect()
-    const hero = await HeroModel.findOne({heroId: id})
-    console.log(hero)
+    const heroes = await HeroModel.findByHeroId(min, max)
+    console.log(heroes)
     disconnect()
 }
 
-check(14)
+check(13,15)
