@@ -1,9 +1,9 @@
 import { Document, Model } from "mongoose"
 
-export interface Counter {
+export interface ICounter {
     key: string
     seq: number
 }
 
-export interface CounterDocument extends Counter, Document {}
-export interface CounterModel extends Model<CounterDocument> {}
+export interface ICounterDocument extends ICounter, Document {}
+export interface ICounterModel extends Model<ICounterDocument> {}
