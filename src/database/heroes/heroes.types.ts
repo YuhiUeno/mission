@@ -23,36 +23,36 @@ export interface IHeroModel extends Model<IHeroDocument> {
             heroId: number
             name: string
         }
-    ) => Promise<IHeroDocument>
+    ) => Promise<IHeroDocument>;
 
     findByHeroId: (
         this: IHeroModel,
         min?: number,
         max?: number
-    ) => Promise<IHeroDocument[]>
+    ) => Promise<IHeroDocument[]>;
 
     getHeroes: (
         this: IHeroModel,
-    ) => Promise<IHeroDocument>
+    ) => Promise<IHeroDocument>;
 
     getHero: (
         this: IHeroModel,
         heroId: number
-    ) => Promise<IHeroDocument>
+    ) => Promise<IHeroDocument>;
 
     updateHeroName: (
         this: IHeroModel,
         heroId: number,
         name: String
-    ) => Promise<void>
+    ) => Promise<void>;
 
     addHero: (
         this: IHeroModel,
         name: String
-    ) => Promise<void>
+    ) => Promise<void>;
 
     deleteHero: (
         this: IHeroModel,
         heroId: number
-    ) => Promise<IHeroDocument>
+    ) => Promise<IHeroDocument>;
 }

@@ -23,10 +23,7 @@ export async function getHero(this: IHeroModel, heroId: number): Promise<IHeroDo
 };
 
 export async function updateHeroName(this: IHeroModel, heroId: number, name: string): Promise<void> {
-    await this.updateOne(
-        {heroId: heroId}, 
-        {$set: {name: name}}
-    );
+    await this.updateOne({heroId: heroId}, {$set: {name: name}});
 };
 
 export async function addHero(this: IHeroModel, name: string): Promise<void> {
