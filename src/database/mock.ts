@@ -1,8 +1,8 @@
 import { connect, disconnect } from './db'
 import { HeroModel } from './heroes/heroes.model'
-import { Hero } from './heroes/heroes.types'
+import { IHero } from './heroes/heroes.types'
 
-const HEROES: Hero[] = [
+const HEROES: IHero[] = [
     { heroId: 11, name: 'Dr Nice' },
     { heroId: 12, name: 'Narco' },
     { heroId: 13, name: 'Bombasto' },
