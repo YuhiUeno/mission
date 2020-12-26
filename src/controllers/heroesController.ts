@@ -4,7 +4,11 @@ import { HeroModel } from '../database/heroes/heroes.model'
 export class HeroesController {
     index = {
         get: async (req: Request, res: Response, next: NextFunction) => {
-            res.json(await HeroModel.getHeroes())
+            if (req.params.name) {
+                console.log(req.params.name)
+            } else {
+                res.json(await HeroModel.getHeroes())
+            }
         },
         post: async (req: Request, res: Response, next: NextFunction) => {
             try {
