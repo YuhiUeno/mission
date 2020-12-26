@@ -48,14 +48,15 @@ export async function updateHeroName(this: IHeroModel,
 export async function addHero(
     this: IHeroModel,
     name: string
-): Promise<IHeroDocument> {
+): Promise<number> {
     const result = await CounterModel.findOneAndUpdate(
         {key: "heroId"},
         {$inc: {seq: 1}},
         {upsert: true, returnOriginal: true},
     )
-    await this.create({heroId: result.seq, name: name})
-    return this.findOne({heroId: result.seq})
+    const seq = result.seq
+    await this.create({heroId: seq, name: name})
+    return seq
 }
 
 export async function deleteHero(

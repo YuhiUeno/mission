@@ -15,7 +15,9 @@ export class HeroesController {
         },
         post: async (req: Request, res: Response, next: NextFunction) => {
             try {
-                const hero = await HeroModel.addHero(req.body.name)
+                const heroId = await HeroModel.addHero(req.body.name)
+                console.log(heroId)
+                const hero = await HeroModel.findOne({heroId: heroId})
                 console.log(hero)
                 res.json(hero)
             } catch (err) {

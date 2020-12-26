@@ -49,7 +49,7 @@ export interface IHeroModel extends Model<IHeroDocument> {
     addHero: (
         this: IHeroModel,
         name: String
-    ) => Promise<IHeroDocument>
+    ) => Promise<number>
 
     deleteHero: (
         this: IHeroModel,
