@@ -1,7 +1,11 @@
 import { IHeroDocument, IHeroModel } from "./heroes.types"
 import { CounterModel } from "../counters/counters.model"
 
-export async function findOneOrCreate(this: IHeroModel, heroId: number, name: string): Promise<IHeroDocument> {
+export async function findOneOrCreate(
+    this: IHeroModel,
+    heroId: number,
+    name: string
+): Promise<IHeroDocument> {
     const record = await this.findOne({ heroId: heroId })
     if (record) {
         return record
@@ -10,11 +14,17 @@ export async function findOneOrCreate(this: IHeroModel, heroId: number, name: st
     }
 }
 
-export async function findByHeroId(this: IHeroModel, min?: number, max?: number): Promise<IHeroDocument[]> {
+export async function findByHeroId(
+    this: IHeroModel,
+    min?: number,
+    max?: number
+): Promise<IHeroDocument[]> {
     return this.find({ heroId: {$gte: min || 11, $lte: max || Infinity} })
 }
 
-export async function getHeroes(this: IHeroModel): Promise<IHeroDocument[]> {
+export async function getHeroes(
+    this: IHeroModel
+): Promise<IHeroDocument[]> {
     return this.find()
 }
 
