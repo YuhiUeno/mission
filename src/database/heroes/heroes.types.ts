@@ -11,31 +11,6 @@ export interface IHero {
 export interface IHeroDocument extends IHero, Document {
     setLastUpdated: (this: IHeroDocument) => Promise<void>
     sameName: (this: IHeroDocument) => Promise<Document[]>
-
-    getHeroes: (
-        this: IHeroDocument,
-    ) => Promise<Document>
-
-    getHero: (
-        this: IHeroDocument,
-        heroId: number
-    ) => Promise<Document>
-
-    updateHeroName: (
-        this: IHeroDocument,
-        heroId: number,
-        name: String
-    ) => Promise<void>
-
-    addHero: (
-        this: IHeroDocument,
-        name: String
-    ) => Promise<void>
-
-    deleteHero: (
-        this: IHeroDocument,
-        heroId: number
-    ) => Promise<Document>
 }
 
 export interface IHeroModel extends Model<IHeroDocument> {

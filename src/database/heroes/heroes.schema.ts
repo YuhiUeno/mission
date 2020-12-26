@@ -29,9 +29,4 @@ HeroSchema.statics.deleteHero = deleteHero
 HeroSchema.methods.setLastUpdate = setLastUpdate
 HeroSchema.methods.sameName = sameName
 
-HeroSchema.methods.getHeroes = getHeroes
-HeroSchema.methods.getHero = getHero
-HeroSchema.methods.addHero = addHero
-HeroSchema.methods.deleteHero = deleteHero
-
 export { HeroSchema }
