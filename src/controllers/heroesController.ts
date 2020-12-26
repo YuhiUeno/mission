@@ -4,6 +4,7 @@ import { HeroModel } from '../database/heroes/heroes.model'
 export class HeroesController {
     index = {
         get: async (req: Request, res: Response, next: NextFunction) => {
+            console.log(req.params.name)
             if (req.params.name) {
                 console.log(req.params.name)
             } else {
