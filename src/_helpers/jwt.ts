@@ -4,7 +4,7 @@ import { UserModel } from "../database/users/users.model";
 
 // mock config data
 const config = {
-    connectionString: "mongodb://localhost/node-mongo-registration-login-api",
+    connectionString: "mongodb://127.0.0.1:27017/heroes",
     secret: "THIS IS USED TO SIGN AND VERIFY JWT TOKENS, REPLACE IT WITH YOUR OWN SECRET, IT CAN BE ANY STRING"
 }
 
