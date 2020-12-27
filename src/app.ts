@@ -18,7 +18,7 @@ app.use(express.urlencoded({ extended: false }))
 app.use(cookieParser())
 
 // app.use(jwt())
-// app.use(cors())
+app.use(cors())
 
 app.use('/api/', indexRouter)
 app.use('/api/users', userRouter)
