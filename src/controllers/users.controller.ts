@@ -15,10 +15,7 @@ export class UserController {
         });
         userModel.createUser(req.body.password)
             .then(() => res.json({}))
-            .catch(err => {
-                err.req = req.body
-                next(err)
-            });
+            .catch(err => {next(err)});
     }
 
     getAll = (req: Request, res: Response, next: NextFunction) => {

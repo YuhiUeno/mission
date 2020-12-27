@@ -1,5 +1,5 @@
 import { IUserDocument, IUserModel } from "./users.types";
-import { jwt } from "jsonwebtoken";
+import * as jwt from "@types/jsonwebtoken";
 import * as bcrypt from "bcryptjs";
 
 //const db = require('_helpers/db');
@@ -15,6 +15,7 @@ export async function authenticate(
     email: string,
     password: string
 ) {
+    console.log(email, password)
     const user = await this.findOne({ email: email });
     if (user && bcrypt.compareSync(password, user.hash)) {
         const token = jwt.sign({ sub: user.id }, config.secret, { expiresIn: '7d' });
