@@ -10,7 +10,6 @@ const config = {
 }
 
 export function jwt() {
-    console.log(1)
     const secret = config.secret;
     return expressJwt({ secret, algorithms: ['HS256'], isRevoked }).unless({
         path: [
@@ -22,7 +21,6 @@ export function jwt() {
 }
 
 async function isRevoked(req, payload, done) {
-    console.log(5)
     const user = await UserModel.getById(payload.sub);
 
     // revoke token if user no longer exists

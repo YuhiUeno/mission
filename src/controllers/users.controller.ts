@@ -9,12 +9,10 @@ export class UserController {
     }
 
     register = (req: Request, res: Response, next: NextFunction) => {
-        console.log(3)
         const userModel = new UserModel({
             email: req.body.email,
             name: req.body.name
         });
-        console.log(4)
         userModel.createUser(req.body.password)
             .then(() => res.json({}))
             .catch(err => {next(err)});
