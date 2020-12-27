@@ -7,4 +7,4 @@ const router = express.Router();
 const indexController = new IndexController();
 router.get('/', indexController.index);
 
-export {router};
+export { router as indexRouter };

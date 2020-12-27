@@ -1,4 +1,4 @@
-import { Document, Model, ObjectId } from "mongoose"
+import { Document, Model } from "mongoose"
 
 
 export interface IUser {
@@ -16,7 +16,7 @@ export interface IUserDocument extends IUser, Document {
 
     updatePassword: (
         this: IUserDocument,
-        id: ObjectId,
+        id: string,
         password: string
     ) => Promise<void>
 }
@@ -32,11 +32,11 @@ export interface IUserModel extends Model<IUserDocument> {
     
     getById: (
         this: IUserModel,
-        id: number
+        id: string
     ) => Promise<IUserDocument>
     
     _delete: (
         this: IUserModel,
-        id: ObjectId
+        id: string
     ) => Promise<void>
 }

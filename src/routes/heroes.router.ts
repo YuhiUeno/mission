@@ -13,4 +13,4 @@ router.post('/', heroController.index.post)
 router.get('/:id(\\d+)', heroController.id.get)
 router.delete('/:id(\\d+)', heroController.id.delete)
 
-export {router};
+export {router as heroRouter};

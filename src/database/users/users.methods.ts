@@ -1,6 +1,5 @@
 import { IUserDocument } from "./users.types";
-import { ObjectId } from "mongoose";
-import { bcrypt } from "bcryptjs";
+import * as bcrypt from "bcryptjs";
 
 export async function createUser(
     this: IUserDocument,
@@ -24,7 +23,7 @@ export async function createUser(
 
 export async function updatePassword(
     this: IUserDocument,
-    id: ObjectId,
+    id: string,
     password: string
 ): Promise<void> {
     const user = await this.model("user").findById(id);

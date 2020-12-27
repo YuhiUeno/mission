@@ -14,4 +14,4 @@ router.get('/:id', userController.getById);
 router.put('/:id', userController.update);
 router.delete('/:id', userController._delete);
 
-export { router };
+export { router as userRouter };

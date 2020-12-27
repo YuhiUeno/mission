@@ -1,7 +1,6 @@
 import { IUserDocument, IUserModel } from "./users.types";
 import { jwt } from "jsonwebtoken";
-import { bcrypt } from "bcryptjs";
-import { ObjectId } from "mongoose";
+import * as bcrypt from "bcryptjs";
 
 const db = require('_helpers/db');
 const User = db.User;
@@ -33,14 +32,14 @@ export async function getAll(this: IUserModel): Promise<IUserDocument[]> {
 
 export async function getById(
     this: IUserModel,
-    id: number
+    id: string
 ): Promise<IUserDocument> {
     return this.findById(id);
 }
 
 export async function _delete(
     this: IUserModel,
-    id: ObjectId
+    id: string
 ): Promise<void> {
-    await User.findByIdAndRemove(id);
+    await this.findByIdAndRemove(id);
 }
