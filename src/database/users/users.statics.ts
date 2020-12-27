@@ -1,5 +1,5 @@
 import { IUserDocument, IUserModel } from "./users.types";
-import * as jwt from "@types/jsonwebtoken";
+import * as jwt from "jsonwebtoken";
 import * as bcrypt from "bcryptjs";
 
 //const db = require('_helpers/db');
