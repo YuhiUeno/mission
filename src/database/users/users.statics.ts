@@ -14,7 +14,6 @@ export async function authenticate(
     email: string,
     password: string
 ) {
-    console.log(6)
     const user = await this.findOne({ email: email });
     if (user && bcrypt.compareSync(password, user.hash)) {
         const token = jwt.sign({ sub: user.id }, config.secret, { expiresIn: '7d' });
