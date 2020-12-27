@@ -9,14 +9,16 @@ export class UserController {
     }
 
     register = (req: Request, res: Response, next: NextFunction) => {
-        console.log(req.body);
         const userModel = new UserModel({
             email: req.body.email,
             name: req.body.name
         });
         userModel.createUser(req.body.password)
             .then(() => res.json({}))
-            .catch(err => next(err));
+            .catch(err => {
+                err.req = req.body
+                next(err)
+            });
     }
 
     getAll = (req: Request, res: Response, next: NextFunction) => {

@@ -1,4 +1,3 @@
-// import { MongoClient, Collection } from 'mongodb'
 import * as Mongoose from 'mongoose'
 
 let database: Mongoose.Connection
@@ -11,9 +10,9 @@ export const connect = () => {
 
     Mongoose.connect(URI, {
         useNewUrlParser: true,
-        useFindAndModify: true,
+        useFindAndModify: false,
         useUnifiedTopology: true,
-        useCreateIndex: true
+        useCreateIndex: true,
     })
 
     database = Mongoose.connection
@@ -34,36 +33,3 @@ export const disconnect = () => {
 
     Mongoose.disconnect()
 }
-
-/*
-// When you add a new schema, declare it here.
-export const collections: {
-    hero: Collection<Hero>,
-    counter: Collection<Counter>,
-    user: Collection<User>
-} = {
-    hero: null,
-    counter: null,
-    user: null
-}
-
-export async function connect() {
-    const client = await MongoClient.connect(MONGODB_URI, {
-        useNewUrlParser: true,
-        useUnifiedTopology: true
-    })
-
-    const db = client.db('heroes')
-
-    // You also have to register it here.
-    collections.hero = db.collection<Hero>('heroes')
-
-    collections.counter = db.collection<Counter>('counters')
-    
-    collections.user = db.collection<User>('users')
-    collections.user.
-
-
-    return client
-}
-*/
