@@ -13,6 +13,7 @@ export class UserController {
             email: req.body.email,
             name: req.body.name
         });
+        console.log(req.body);
         userModel.createUser(req.body.password)
             .then(() => res.json({}))
             .catch(err => next(err));
