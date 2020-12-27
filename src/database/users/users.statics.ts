@@ -3,7 +3,6 @@ import * as jwt from "jsonwebtoken";
 import * as bcrypt from "bcryptjs";
 
 //const db = require('_helpers/db');
-
 // mock config data
 const config = {
     connectionString: "mongodb://127.0.0.1:27017/heroes",
@@ -15,7 +14,6 @@ export async function authenticate(
     email: string,
     password: string
 ) {
-    console.log(email, password)
     const user = await this.findOne({ email: email });
     if (user && bcrypt.compareSync(password, user.hash)) {
         const token = jwt.sign({ sub: user.id }, config.secret, { expiresIn: '7d' });
