@@ -15,8 +15,7 @@ export function jwt() {
         path: [
             // public routes that don't require authentication
             '/api/users/authenticate',
-            '/api/users/register',
-            '/api/heroes/*'
+            '/api/users/register'
         ]
     });
 }
