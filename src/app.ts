@@ -10,7 +10,6 @@ import { heroRouter } from './routes/heroes.router'
 import { jwt } from './_helpers/jwt'
 import { errorHandler } from './_helpers/error-handler'
 
-
 const app = express()
 
 app.use(logger('dev'))

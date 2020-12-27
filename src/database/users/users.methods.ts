@@ -5,7 +5,6 @@ export async function createUser(
     this: IUserDocument,
     password: string
 ): Promise<void> {
-    console.log(this.email, password)
     // validate
     if (await this.model("user").findOne({ email: this.email })) {
         throw 'Email "' + this.email + '" is already used';
