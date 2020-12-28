@@ -4,12 +4,18 @@ import { Hero } from '../hero';
 import { Observable, of } from 'rxjs';
 import { MessageService } from './message.service';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
-import { catchError, map, tap } from 'rxjs/operators';
+import { catchError, tap } from 'rxjs/operators';
 
 @Injectable({
     providedIn: 'root'
 })
 export class HeroService {
+
+    constructor(
+        private messageService: MessageService,
+        private http: HttpClient
+    ) { }
+    
     getHeroes(): Observable<Hero[]> {
         // TODO: send the message _after_ fetching the heroes
         return this.http.get<Hero[]>(this.heroesUrl).pipe(
@@ -44,12 +50,13 @@ export class HeroService {
             console.error(error);
 
             // TODO: ユーザーへの開示のためにエラーの変換処理を改善する
+
             // custom error message
             let message: string
             if ('message' in error.error) {
                 message = error.error.message
             }
-            // express default
+            // express default message
             else {
                 message = error.message
             }
@@ -93,9 +100,4 @@ export class HeroService {
             catchError(this.handleError<Hero[]>('searchHeroes', []))
         )
     }
-
-    constructor(
-        private messageService: MessageService,
-        private http: HttpClient
-    ) { }
 }

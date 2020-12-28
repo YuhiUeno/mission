@@ -1,10 +1,6 @@
 import { Component, Inject } from '@angular/core';
 import { MatDialog, MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
-
-export interface UserData {
-  email: string
-  password: string
-}
+import { User, UserService } from "../services/user.service";
 
 @Component({
   selector: 'views-sign-up',
@@ -16,7 +12,7 @@ export class SignUpComponent {
   email: string
   password: string
 
-  constructor(public dialog: MatDialog) { }
+  constructor(public dialog: MatDialog, private userService: UserService) { }
 
   signUpDialog(): void {
     const dialogRef = this.dialog.open(SignUpDialog, {
@@ -25,8 +21,13 @@ export class SignUpComponent {
     })
 
     dialogRef.afterClosed().subscribe(result => {
-      console.log(result)
+      this.create(result)
     })
+  }
+
+  create(user: User): void {
+    if (!user) { return }
+    this.userService.createUser(user).subscribe()
   }
 
 }
@@ -40,7 +41,7 @@ export class SignUpDialog {
   hide = true
   constructor(
     public dialogRef: MatDialogRef<SignUpDialog>,
-    @Inject(MAT_DIALOG_DATA) public data: UserData
+    @Inject(MAT_DIALOG_DATA) public data: User
   ) {}
 
   onNoClick(): void {
