@@ -1,5 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
+import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
 
 // import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
@@ -31,8 +31,8 @@ import { MatInputModule } from "@angular/material/input";
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { CoverComponent } from './cover/cover.component';
 import { WorkCardComponent } from './work-card/work-card.component';
-import { LogInComponent } from './log-in/log-in.component';
-import { SignUpComponent } from './sign-up/sign-up.component'
+import { LogInComponent, LogInDialog } from './log-in/log-in.component';
+import { SignUpComponent, SignUpDialog } from './sign-up/sign-up.component'
 
 @NgModule({
   declarations: [
@@ -47,6 +47,8 @@ import { SignUpComponent } from './sign-up/sign-up.component'
     WorkCardComponent,
     LogInComponent,
     SignUpComponent,
+    LogInDialog,
+    SignUpDialog
   ],
   imports: [
     BrowserModule,
@@ -71,7 +73,6 @@ import { SignUpComponent } from './sign-up/sign-up.component'
     // )
   ],
   providers: [],
-  bootstrap: [AppComponent],
-  schemas: [CUSTOM_ELEMENTS_SCHEMA]
+  bootstrap: [AppComponent]
 })
 export class AppModule { }
