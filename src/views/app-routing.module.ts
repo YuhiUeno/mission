@@ -5,7 +5,7 @@ import { HeroDetailComponent } from './hero-detail/hero-detail.component'
 import { CoverComponent } from './cover/cover.component'
 
 const routes: Routes = [
-  { path: '', redirectTo: '/cover', pathMatch: 'full'},
+  // { path: '', redirectTo: '/cover', pathMatch: 'full'},
   { path: 'heroes', component: HeroesComponent },
   { path: 'cover', component: CoverComponent },
   { path: 'detail/:id', component: HeroDetailComponent}
