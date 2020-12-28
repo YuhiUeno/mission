@@ -4,20 +4,16 @@ svg#logo {
   vertical-align: middle;
 }
 
-a.logo-link:hover {
+.logo-link:hover {
   opacity: 0.5;
 }
 
-button.log-in-button {
-  span {
-    font-size: 16px;
-    font-weight: 700;
-  }
+.log-in-button {
+  font-size: 16px;
+  font-weight: 700;
 }
 
-button.sign-up-button {
-  span {
-    font-size: 16px;
-    font-weight: 700;
-  }
+.sign-up-button {
+  font-size: 16px;
+  font-weight: 700;
 }
