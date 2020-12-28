@@ -33,7 +33,8 @@ export class LogInComponent {
 
 @Component({
   selector: 'views-log-in-dialog',
-  templateUrl: './log-in-dialog.html'
+  templateUrl: './log-in-dialog.html',
+  styleUrls: ['./log-in-dialog.scss']
 })
 export class LogInDialog {
 
