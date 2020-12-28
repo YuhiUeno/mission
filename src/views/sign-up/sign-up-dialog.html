@@ -3,9 +3,11 @@
   <mat-form-field>
     <mat-label>Enter your email</mat-label>
     <input matInput [(ngModel)]="data.email" autocomplete="email">
+    <mat-label>Enter your password</mat-label>
+    <input matInput [(ngModel)]="data.password" autocomplete="new-password">
   </mat-form-field>
 </div>
 <div mat-dialog-actions>
   <button mat-button (click)="onNoClick()">No Thanks</button>
-  <button mat-button [mat-dialog-close]="data.email" cdkFocusInitial>Ok</button>
+  <button mat-button [mat-dialog-close]="data" cdkFocusInitial>Ok</button>
 </div>
