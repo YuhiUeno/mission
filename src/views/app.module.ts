@@ -26,7 +26,9 @@ import { MatChipsModule } from '@angular/material/chips'
 
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { CoverComponent } from './cover/cover.component';
-import { WorkCardComponent } from './work-card/work-card.component'
+import { WorkCardComponent } from './work-card/work-card.component';
+import { LogInComponent } from './log-in/log-in.component';
+import { SignUpComponent } from './sign-up/sign-up.component'
 
 @NgModule({
   declarations: [
@@ -39,6 +41,8 @@ import { WorkCardComponent } from './work-card/work-card.component'
     LogoComponent,
     CoverComponent,
     WorkCardComponent,
+    LogInComponent,
+    SignUpComponent,
   ],
   imports: [
     BrowserModule,
