@@ -23,6 +23,7 @@ import { MatIconModule } from '@angular/material/icon'
 import { MatTabsModule } from '@angular/material/tabs'
 import { MatCardModule } from '@angular/material/card'
 import { MatChipsModule } from '@angular/material/chips'
+import { MatDialogModule } from "@angular/material/dialog";
 
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { CoverComponent } from './cover/cover.component';
@@ -57,8 +58,8 @@ import { SignUpComponent } from './sign-up/sign-up.component'
     MatTabsModule,
     MatCardModule,
     FlexLayoutModule,
-    MatChipsModule
-    
+    MatChipsModule,
+    MatDialogModule
 
     // HttpClientInMemoryWebApiModule.forRoot(
     //   InMemoryDataService, { dataEncapsulation: false }
