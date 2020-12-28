@@ -27,7 +27,7 @@ export class UserService {
 
     createUser(user: User): Observable<User> {
         const url = `${this.usersUrl}/register`
-        return this.http.post<User>(this.usersUrl, user, this.httpOptions).pipe(
+        return this.http.post<User>(url, user, this.httpOptions).pipe(
             tap((newUser: User) => this.log(`created user w/ email=${newUser.email}`)),
             catchError(this.handleError<User>('createUser'))
         )
