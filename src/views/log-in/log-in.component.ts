@@ -1,5 +1,10 @@
-import { Component } from '@angular/core';
-import { MatDialog, MatDialogRef } from '@angular/material/dialog';
+import { Component, Inject } from '@angular/core';
+import { MatDialog, MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
+
+export interface UserData {
+  email: string
+  password: string
+}
 
 @Component({
   selector: 'views-log-in',
@@ -8,11 +13,19 @@ import { MatDialog, MatDialogRef } from '@angular/material/dialog';
 })
 export class LogInComponent {
 
+  email: string
+  password: string
+
   constructor(public dialog: MatDialog) { }
 
   logInDialog(): void {
     const dialogRef = this.dialog.open(LogInDialog, {
-      width: '480px'
+      width: '480px',
+      data: {email: this.email, password: this.password}
+    })
+
+    dialogRef.afterClosed().subscribe(result => {
+      console.log(result)
     })
   }
 
@@ -26,6 +39,7 @@ export class LogInDialog {
 
   constructor(
     public dialogRef: MatDialogRef<LogInDialog>,
+    @Inject(MAT_DIALOG_DATA) public data: UserData
   ) {}
 
   onNoClick(): void {
