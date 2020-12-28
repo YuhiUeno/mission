@@ -6,7 +6,10 @@
   </mat-form-field>
   <mat-form-field>
     <mat-label>Enter your password</mat-label>
-    <input matInput [(ngModel)]="data.password" autocomplete="new-password">
+    <input matInput [(ngModel)]="data.password" [type]="hide ? 'password' : 'text'" autocomplete="new-password">
+    <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+    <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+    </button>
   </mat-form-field>
 </div>
 <div mat-dialog-actions>
