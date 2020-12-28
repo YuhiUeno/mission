@@ -33,7 +33,7 @@ export class SignUpComponent {
 
 @Component({
   selector: 'views-sign-up-dialog',
-  templateUrl: './sign-up.dialog.html'
+  templateUrl: './sign-up-dialog.html'
 })
 export class SignUpDialog {
 
