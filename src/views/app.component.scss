@@ -8,12 +8,9 @@ svg#logo {
   opacity: 0.5;
 }
 
-.log-in-button {
-  font-size: 16px;
-  font-weight: 700;
-}
-
-.sign-up-button {
-  font-size: 16px;
-  font-weight: 700;
+mat-toolbar {
+  .mat-button {
+    font-size: 16px;
+    font-weight: 700;
+  }
 }
