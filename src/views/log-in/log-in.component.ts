@@ -37,7 +37,7 @@ export class LogInComponent {
   styleUrls: ['./log-in-dialog.scss']
 })
 export class LogInDialog {
-
+  hide = true
   constructor(
     public dialogRef: MatDialogRef<LogInDialog>,
     @Inject(MAT_DIALOG_DATA) public data: UserData

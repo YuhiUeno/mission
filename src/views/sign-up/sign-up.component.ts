@@ -37,7 +37,7 @@ export class SignUpComponent {
   styleUrls: ['./sign-up-dialog.scss']
 })
 export class SignUpDialog {
-
+  hide = true
   constructor(
     public dialogRef: MatDialogRef<SignUpDialog>,
     @Inject(MAT_DIALOG_DATA) public data: UserData
