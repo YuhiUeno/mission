@@ -1,6 +1,10 @@
 <h1 mat-dialog-title>Sign Up Now!</h1>
 <div mat-dialog-content>
   <mat-form-field>
+    <mat-label>Enter your name</mat-label>
+    <input matInput [(ngModel)]="data.name" autocomplete="name">
+  </mat-form-field>
+  <mat-form-field>
     <mat-label>Enter your email</mat-label>
     <input matInput [(ngModel)]="data.email" autocomplete="email">
   </mat-form-field>
