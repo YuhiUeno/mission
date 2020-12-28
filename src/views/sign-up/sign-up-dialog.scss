@@ -27,11 +27,16 @@ mat-form-field.mat-form-field {
     padding-right: 32px;
   }
   @include lt-bp($md-min) {
-    padding-left: 32px;
-    padding-right: 32px;
+    padding-left: 4px;
+    padding-right: 4px;
   }
 }
 
 .mat-dialog-title {
   text-align: center;
+}
+
+.mat-button {
+  font-size: 16px;
+  font-weight: 700;
 }
