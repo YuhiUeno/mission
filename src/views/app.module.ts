@@ -24,6 +24,8 @@ import { MatTabsModule } from '@angular/material/tabs'
 import { MatCardModule } from '@angular/material/card'
 import { MatChipsModule } from '@angular/material/chips'
 import { MatDialogModule } from "@angular/material/dialog";
+import { MatFormFieldModule } from "@angular/material/form-field";
+import { MatInputModule } from "@angular/material/input";
 
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { CoverComponent } from './cover/cover.component';
@@ -59,7 +61,9 @@ import { SignUpComponent } from './sign-up/sign-up.component'
     MatCardModule,
     FlexLayoutModule,
     MatChipsModule,
-    MatDialogModule
+    MatDialogModule,
+    MatFormFieldModule,
+    MatInputModule
 
     // HttpClientInMemoryWebApiModule.forRoot(
     //   InMemoryDataService, { dataEncapsulation: false }
